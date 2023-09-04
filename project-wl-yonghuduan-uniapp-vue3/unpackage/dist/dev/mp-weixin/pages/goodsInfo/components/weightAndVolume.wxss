@@ -1,0 +1,104 @@
+/* 水平间距 */
+/* 水平间距 */
+.weightAndVolume.data-v-0d4e98f8 {
+  background-color: white;
+  margin-top: 20rpx;
+  padding: 56rpx 40rpx;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 200rpx;
+}
+.weightAndVolume .volume-box.data-v-0d4e98f8 {
+  margin-top: 50rpx;
+}
+.weightAndVolume .volume-box .isVolumeInfo.data-v-0d4e98f8 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.weightAndVolume .volume-box .isVolumeInfo .isVolumeInfo-title.data-v-0d4e98f8 {
+  font-size: 24rpx;
+  color: #888888;
+  margin-right: 18rpx;
+}
+.weightAndVolume .volume-box .isVolumeInfo.data-v-0d4e98f8 .uni-switch-input::before {
+  background-color: #CCCCCC;
+  width: 120rpx;
+}
+.weightAndVolume .volume-box .isVolumeInfo.data-v-0d4e98f8 .uni-switch-input.uni-switch-input-checked:after {
+  transform: translateX(60rpx);
+}
+.weightAndVolume .volume-box .isVolumeInfo.data-v-0d4e98f8 .uni-switch-input {
+  width: 120rpx;
+}
+.weightAndVolume .volume-box .isVolumeInfo switch.data-v-0d4e98f8 {
+  position: relative;
+  left: 20rpx;
+}
+.weightAndVolume .weight-box.data-v-0d4e98f8, .weightAndVolume .volume-box.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box.data-v-0d4e98f8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.weightAndVolume .weight-box .unit.data-v-0d4e98f8, .weightAndVolume .volume-box .unit.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .unit.data-v-0d4e98f8 {
+  position: absolute;
+  right: 126rpx;
+  top: 16rpx;
+}
+.weightAndVolume .weight-box .weight-box-title.data-v-0d4e98f8, .weightAndVolume .weight-box .volume-box-title.data-v-0d4e98f8, .weightAndVolume .volume-box .weight-box-title.data-v-0d4e98f8, .weightAndVolume .volume-box .volume-box-title.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .weight-box-title.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .volume-box-title.data-v-0d4e98f8 {
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #0F0F0F;
+}
+.weightAndVolume .weight-box .uni-numbox.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox.data-v-0d4e98f8 {
+  height: 76rpx;
+}
+.weightAndVolume .weight-box .uni-numbox .uni-numbox__value.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox .uni-numbox__value.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox .uni-numbox__value.data-v-0d4e98f8 {
+  height: 76rpx !important;
+  margin: 0;
+  background-color: #F9F9F9 !important;
+  width: 220rpx;
+}
+.weightAndVolume .weight-box .uni-numbox .uni-numbox__plus.data-v-0d4e98f8, .weightAndVolume .weight-box .uni-numbox .uni-numbox__minus.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox .uni-numbox__plus.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox .uni-numbox__minus.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox .uni-numbox__plus.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox .uni-numbox__minus.data-v-0d4e98f8 {
+  width: 76rpx;
+  border-radius: 0rpx 36rpx 36rpx 0;
+  background-color: #ECECEC !important;
+}
+.weightAndVolume .weight-box .uni-numbox .uni-numbox__plus .uni-numbox--text span.data-v-0d4e98f8, .weightAndVolume .weight-box .uni-numbox .uni-numbox__minus .uni-numbox--text span.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox .uni-numbox__plus .uni-numbox--text span.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox .uni-numbox__minus .uni-numbox--text span.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox .uni-numbox__plus .uni-numbox--text span.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox .uni-numbox__minus .uni-numbox--text span.data-v-0d4e98f8 {
+  font-weight: bold;
+}
+.weightAndVolume .weight-box .uni-numbox .uni-numbox__minus.data-v-0d4e98f8, .weightAndVolume .volume-box .uni-numbox .uni-numbox__minus.data-v-0d4e98f8, .weightAndVolume .isVolumeInfo-title-box .uni-numbox .uni-numbox__minus.data-v-0d4e98f8 {
+  border-radius: 36rpx 0rpx 0rpx 36rpx;
+}
+.weightAndVolume .isVolumeInfo-title-box.data-v-0d4e98f8 {
+  justify-content: flex-end;
+  margin-top: 10rpx;
+}
+.weightAndVolume .long-width-height.data-v-0d4e98f8 {
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+}
+.weightAndVolume .long-width-height .cheng.data-v-0d4e98f8 {
+  margin: 0 12rpx;
+  height: 19rpx;
+  line-height: 30rpx;
+}
+.weightAndVolume .long-width-height .long.data-v-0d4e98f8 .uni-input-wrapper, .weightAndVolume .long-width-height .long .uni-input.data-v-0d4e98f8, .weightAndVolume .long-width-height .width.data-v-0d4e98f8 .uni-input-wrapper, .weightAndVolume .long-width-height .width .uni-input.data-v-0d4e98f8, .weightAndVolume .long-width-height .height.data-v-0d4e98f8 .uni-input-wrapper, .weightAndVolume .long-width-height .height .uni-input.data-v-0d4e98f8 {
+  background-color: #F4F4F4;
+  border-radius: 36rpx;
+  width: 198rpx;
+  height: 74rpx;
+  text-align: center;
+}
+.weightAndVolume .accounting-rules.data-v-0d4e98f8 {
+  font-size: 24rpx;
+  color: #888888;
+  margin-top: 40rpx;
+}
+.weightAndVolume .accounting-rules .red.data-v-0d4e98f8 {
+  color: #E84134;
+  font-size: 24rpx;
+  text-decoration: underline;
+}

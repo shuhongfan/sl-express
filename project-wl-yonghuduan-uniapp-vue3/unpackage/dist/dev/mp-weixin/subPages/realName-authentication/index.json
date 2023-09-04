@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "实名认证",
+  "enablePullDownRefresh": false,
+  "usingComponents": {}
+}

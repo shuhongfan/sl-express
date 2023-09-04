@@ -1,0 +1,37 @@
+.goodsInfo-box{
+	height: 100vh;
+	background-color:#F3F5F9
+}
+
+.goods-info{
+	background-color:#F3F5F9;
+	overflow: scroll;
+	.footer{
+		height: 164rpx;
+		width: 100%;
+		background-color: white;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 9;
+		.btn{
+			width: 404rpx;
+			height: 88rpx;
+			background-color: #CCCCCC;
+			border-radius: 44rpx;
+			text-align: center;
+			line-height: 88rpx;
+			color: white;
+			margin: 0 auto;
+			margin-top: 17rpx;
+		}
+		.btn.active{
+			background-color:#E84134
+		}
+	}
+}
+
+.isAll{
+	background-color: white;
+	height: 100vh;
+}

@@ -1,0 +1,638 @@
+.dashboard-row{
+  margin-top: 20px; margin-bottom: 20px
+}
+.dashboard-col{
+  padding-left: 20px; padding-right: 10px
+}
+.institutionalOverview{
+  margin-top: 0
+}
+.dashboard-col2{
+  padding-left: 10px; padding-right: 20px
+}
+.dashboard-row2{
+  margin-bottom: 20px
+}
+.dashboard-col3{
+  padding-left: 20px; padding-right: 10px
+}
+.todoTasks{
+  display:flex;align-items:center
+}
+.toolipcontent{
+  line-height:28px;color:#818693;font-size:14px;background:white
+}
+.Tasksinprogress{
+  display:flex;align-items:center
+}
+.dashboard-col4{
+  padding-left:10px;padding-right:20px
+}
+.todoTasks1{
+  line-height:28px;color:#818693;font-size:14px;background:white
+}
+.Totalorders{
+  margin-bottom:12px
+}
+.tooltip{
+  margin-left:6px
+}
+.dashboard-col5{
+  padding-left:20px;padding-right:20px
+}
+.Commonfunctions{
+  font-size:16px;font-weight:bold;margin-top:0
+}
+.LineManagement{
+  font-size:16px;font-weight:bold;margin-bottom:20px;margin-top:0
+}
+.Totalorderstime{
+  font-size:14px;color:#818693
+}
+.Totalorderstype{
+  font-size:14px;color:#818693;margin-top:0
+}
+.Orderdistribution{
+  margin-bottom:12px
+}
+.Orderdistributiontime{
+  font-size:14px;color:#818693
+}
+.Orderdistributiontype{
+  font-size:14px;color:#818693;margin-top:0
+}
+/deep/ .gzt-remark {
+  font-size: 13px;
+  color: #818693;
+  float: right;
+  margin-right: 7px;
+}
+/deep/ .el-card {
+  box-shadow: none;
+}
+
+// 订单总量样式覆盖
+.cover-card /deep/ .el-card__header {
+  padding: 18px 20px;
+  border-bottom: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.right-info /deep/ .el-card__body {
+  // height: 76px;
+}
+
+.dashboard-container {
+  margin: 24px;
+  margin-top: 0px;
+  overflow-x: hidden;
+  // overflow-y: scroll;
+  height: calc(100vh - 100px);
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+#order-total-chart {
+  height: 208px;
+  margin: 0 auto;
+}
+/deep/ #order-total-chart > div {
+  cursor: default !important;
+}
+/deep/ #order-fenbu-chart > div {
+  cursor: default !important;
+}
+#order-fenbu-chart {
+  height: 208px;
+  margin: 0 auto;
+}
+
+.box-card {
+  // padding: 5px 10px;
+  p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  // 总销售额
+  .total {
+    font-size: 30px;
+    height: 140px;
+    line-height: 100px;
+  }
+  .trends {
+    height: 22px;
+    font-size: 14px;
+    span {
+      display: inline;
+      i {
+        color: red;
+      }
+    }
+    span:last-child {
+      margin-left: 20px;
+      display: inline;
+      i {
+        color: green;
+      }
+    }
+  }
+  .chart {
+    height: 160px;
+  }
+  .hr {
+    border-top: 1px solid #e8e8e8;
+    margin: 0px 0px 10px 0px;
+  }
+  .footer {
+    span {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    span:last-child {
+      margin-left: 8px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+  // 总销售额 end
+}
+
+.hots {
+  height: 293px;
+  position: relative;
+  .pagination {
+    position: absolute;
+    right: 12px;
+    bottom: 5px;
+  }
+  .chart {
+    height: 300px;
+  }
+}
+
+//机构概述
+.institution {
+  .content {
+    position: relative;
+    display: flex;
+    .left-content {
+      padding-left: 10px;
+      flex: 50%;
+      border-right: 1px solid #ebeef5;
+      .name {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 13px;
+      }
+      .address {
+        margin-bottom: 8px;
+      }
+      .duty-people {
+        margin-bottom: 23px;
+      }
+      .address,
+      .duty-people {
+        font-size: 14px;
+        color: #818693;
+      }
+      .search-sales-department {
+        font-size: 14px;
+        color: #e15536;
+        width: 158px;
+        height: 40px;
+        background: #ffeeeb;
+        border: 1px solid #f3917c;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .btn::before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          display: block;
+          background-image: url('../../assets/position.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .right-content {
+      display: flex;
+      flex: 50%;
+      width: 300px;
+      flex-wrap: wrap;
+      .item {
+        flex: 50%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        .label {
+          font-size: 14px;
+          // font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .num {
+          font-size: 32px;
+          font-weight: bold;
+          color: #e15536;
+          cursor: pointer;
+        }
+      }
+      .item > div {
+      }
+      .item:nth-child(2) {
+        padding-right: 25px;
+      }
+      .item:nth-child(1),
+      .item:nth-child(2) {
+        height: 85px;
+      }
+    }
+    .line {
+      position: absolute;
+      height: 156px;
+      width: 1px;
+      background-color: #ebeef5;
+      left: 330px;
+    }
+  }
+}
+/deep/ .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  p {
+    margin-top: 0px;
+    font-size: 16px;
+    color: #20232a;
+    font-weight: bold;
+  }
+}
+//今日数据
+.right-info {
+  .el-card__body {
+    padding: 20px !important;
+  }
+  .row-bg {
+    margin-top: 16px;
+    padding-left: 10px;
+    .el-col {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .label {
+      font-size: 14px;
+      color: #20232a;
+      margin-bottom: 21px;
+    }
+    .value {
+      font-size: 36px;
+      color: #20232a;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+    .bottom {
+      font-size: 14px;
+      color: #818693;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      padding-left: 9px;
+    }
+    .bottom::after {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-image: url('../../assets/rise.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .bottom.active::after {
+      background-image: url('../../assets/down.png');
+    }
+  }
+}
+
+//刷新部分
+.refresh-box {
+  font-size: 14px;
+  color: #818693;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.refresh-box::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background-image: url('../../assets/refresh.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+  // cursor: pointer;
+}
+
+//待办事项
+.notTasking {
+  .bottom-label {
+    justify-content: flex-start;
+    .item {
+      flex: 25%;
+      text-align: center;
+    }
+  }
+}
+.backlog {
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  .bottom-label {
+    cursor: pointer;
+    position: absolute;
+    top: 235px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-right: 40px;
+    .item span:nth-child(1),
+    .item span:nth-child(2) {
+      font-weight: bold;
+    }
+    .item:nth-child(1) {
+      span:nth-child(2) {
+        color: #e15536;
+      }
+    }
+    .item:nth-child(2) {
+      span:nth-child(2) {
+        color: #ffc257;
+      }
+    }
+    .item:nth-child(3) {
+      span:nth-child(2) {
+        color: #ff9739;
+      }
+    }
+    .item:nth-child(4) {
+      span:nth-child(2) {
+        color: #dfcb59;
+      }
+    }
+  }
+}
+.tasking {
+  .bottom-label {
+    padding-right: 55px;
+  }
+}
+//常用功能
+.useFeature {
+  height: 193px;
+  /deep/ .el-card__body {
+    padding: 20px !important;
+  }
+  .useFeaturelist {
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      width: 15.15%;
+      height: 116px;
+      background: #fafafb;
+      border-radius: 10px;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 20px;
+      }
+      p {
+        font-size: 16px;
+        color: #20232a;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+    .item:hover {
+      p {
+        color: #e15536;
+      }
+    }
+  }
+}
+/deep/ .el-card__body {
+  padding: 23px 20px;
+}
+//线路管理
+.lineManage {
+  height: 480px;
+  #line-manage-chart {
+    height: 400px;
+  }
+}
+//运输任务
+.transport-task {
+  height: 480px;
+  .search-more {
+    font-size: 14px;
+    color: #818693;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .search-more::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('../../assets/arrow-more.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 8px;
+  }
+  .scroll-view {
+    position: absolute;
+  }
+  .el-table {
+    margin-top: 6px;
+  }
+  /deep/ td.id {
+    .cell {
+      -webkit-line-clamp: 1;
+    }
+  }
+  /deep/ td {
+    padding: 13px 0;
+  }
+  .table_body {
+    width: 100%;
+  }
+  .table_th {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #ebeef5;
+    border-bottom: none;
+    background-color: #f9fafe;
+  }
+  .tr {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+  }
+  .tr1 {
+    width: 20%;
+  }
+  .tr2 {
+    width: 20%;
+  }
+  .tr3 {
+    width: 20%;
+    font-size: 13px;
+  }
+
+  .tr4 {
+    flex: 1;
+  }
+
+  .th_style {
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0 5px;
+    text-align: center;
+    color: #818693;
+    font-size: 14px;
+  }
+  .table_main_body {
+    width: 100%;
+    height: 351px;
+    overflow: hidden;
+    position: relative;
+  }
+  .table_inner_body {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .startTransition {
+    transition: all 0.5s;
+  }
+  .table_tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .table_tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  .table_tr:hover {
+    background-color: rgb(245, 247, 250);
+  }
+  .table_tr {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #ebeef5;
+    border-bottom: none;
+    .tr1 {
+      padding-left: 20px;
+    }
+  }
+  .table_tr:last-child {
+    border-bottom: 1px solid #ebeef5;
+  }
+}
+
+//订单总量
+.orderAccount {
+  height: 595px;
+  .order-static {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 38px;
+    .item {
+      .num {
+        font-size: 28px;
+        color: #e15536;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      .label {
+        font-size: 12px;
+        color: #818693;
+        text-align: center;
+      }
+    }
+  }
+  #order-account-chart {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .col {
+    width: 33%;
+  }
+}
+
+//订单分布
+.orderDistribute {
+  height: 595px;
+  #order-distribute-chart {
+    height: 480px;
+  }
+}
+//查看营业部分布
+/deep/ .deparment {
+  .el-dialog {
+    border-radius: 0px;
+    height: 600px;
+  }
+  .el-dialog__header {
+    display: none;
+  }
+  img {
+    width: 800px;
+    height: 600px;
+  }
+  .el-dialog__body {
+    padding: 0px;
+    position: relative;
+  }
+  .close-btn {
+    width: 40px;
+    height: 40px;
+    background-image: url('../../assets/department-close-btn.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    cursor: pointer;
+  }
+}

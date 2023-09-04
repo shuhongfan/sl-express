@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sl.ms.base.mapper.base.WorkSchedulingMapper">
+    <insert id="batchInsert" parameterType="java.util.Map">
+        insert into sl_work_scheduling (id, user_id, user_type,
+        agency_id, employee_number, name,
+        phone, state, work_pattern_id,
+        work_continue_start_time,
+        creater, created, updater,
+        updated, is_delete) value
+        <foreach collection="entities" separator="," item="entity">
+            (#{entity.id},#{entity.userId},#{entity.userType},
+                #{entity.agencyId},#{entity.employeeNumber},#{entity.name},
+                #{entity.phone},#{entity.state},#{entity.workPatternId},
+                #{entity.workContinueStartTime},
+                #{entity.creater},#{entity.created},#{entity.updater},
+                #{entity.updated},#{entity.isDelete})
+        </foreach>
+    </insert>
+</mapper>

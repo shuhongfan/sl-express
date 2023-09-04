@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sl.ms.work.mapper.TransportOrderMapper">
+
+    <select id="findStatusCount" resultType="com.sl.ms.work.domain.dto.response.TransportOrderStatusCountDTO">
+        SELECT
+            `status` AS statusCode,
+            count(1) AS count
+        FROM
+            sl_transport_order
+        GROUP BY
+            `status`
+    </select>
+
+</mapper>

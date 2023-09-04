@@ -1,0 +1,43 @@
+stages:
+  - build
+
+# sonar_preview:
+#   stage: sonar
+#   script:
+#     - ci/sonar_preview.sh
+#   tags:
+#     - centos-aliyun-158
+#   only:
+#     - master
+
+sonar_analyze:
+  stage: sonar
+  script:
+    - |
+      sonar-scanner -X \
+      -Dsonar.projectKey=gitlab:$CI_COMMIT_REF_NAME:$CI_PROJECT_NAME \
+      -Dsonar.projectName=gitlab:$CI_COMMIT_REF_NAME:$CI_PROJECT_NAME \
+      -Dsonar.projectVersion=1.0.$CI_PIPELINE_ID \
+      -Dsonar.sources=src \
+      -Dsonar.sourceEncoding=UTF-8 \
+      -Dsonar.issuesReport.html.enable=true \
+      -Dsonar.gitlab.project_id=$CI_PROJECT_ID \
+      -Dsonar.gitlab.commit_sha=$CI_COMMIT_SHA \
+      -Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME
+  tags:
+    - sonar
+  only:
+    - huangxu-0817
+
+build:
+  stage: build
+  script:
+    - yarn --registry https://registry.npm.taobao.org
+    - yarn build:prod
+    - sudo rm -rf /data/nginx/html/${CI_PROJECT_NAME}/*
+    - sudo cp -rf ./dist/* /data/nginx/html/${CI_PROJECT_NAME}/
+    - sudo chown nginx.nginx -R /data/nginx/html/${CI_PROJECT_NAME}
+  tags:
+    - aliyun-kubernetes
+  only:
+    - master

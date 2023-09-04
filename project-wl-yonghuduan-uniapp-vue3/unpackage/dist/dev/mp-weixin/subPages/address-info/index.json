@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "地址信息",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "btn-footer": "../../components/BtnFooter/index",
+    "select-area": "./components/selectArea"
+  }
+}

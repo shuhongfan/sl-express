@@ -1,0 +1,515 @@
+.circleProgress_wrapper {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border: 1px solid #3c3b52;
+    border-radius: 60px;
+    background-size: 100% 100%;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%)
+  }
+  
+  .wrapper {
+    width: 60px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    overflow: hidden
+  }
+  
+  .right {
+    right: 0
+  }
+  
+  .left {
+    left: 0
+  }
+  
+  .circleProgress {
+    width: 110px;
+    height: 110px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0
+  }
+  
+  .rightcircle {
+    border-top: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    right: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 2s ease .3s
+  }
+  
+  .leftcircle {
+    border-bottom: 5px solid #ccc;
+    border-left: 5px solid #ccc;
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 2s ease .3s
+  }
+  
+  .zhongxing {
+    width: 110px;
+    height: 110px;
+    background: #3c3b52;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 50%
+  }
+  
+  .gaoliang {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 30%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .05), 0 0 4px rgba(0, 0, 0, .33) inset;
+    -webkit-transition: .3s;
+    transition: .3s
+  }
+  
+  .barPie--radio {
+    margin: 20px;
+    width: 151px;
+    height: 151px;
+    text-align: center;
+    font: 700 50px open sans condensed, sans-serif;
+    position: absolute;
+    top: -260px;
+    right: 60px;
+    bottom: 0;
+    margin: auto
+  }
+  
+  .barPie {
+    -webkit-perspective: 1000px;
+    perspective: 1000px
+  }
+  
+  .barPie__value {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    margin-top: -25%;
+    z-index: 1;
+    /* color: rgba(255, 255, 255, .8); */
+    color: #000;
+    font-size: .8em;
+    text-shadow: 0 1px rgba(0, 0, 0, .5), 0 2px rgba(0, 0, 0, .4), 0 3px 1px rgba(0, 0, 0, .2)
+  }
+  
+  .barPie__value::after {
+    content: '%';
+    display: inline-block;
+    opacity: .3;
+    font-size: .5em;
+    margin-left: .1em
+  }
+  
+  .barPie__ring {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg)
+  }
+  
+  .barPie__ring label {
+    cursor: pointer
+  }
+  
+  .barPie__ring__item {
+    position: absolute;
+    width: 10px;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition: .1s;
+    transition: .1s
+  }
+  
+  .barPie__ring__item::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 30%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .15);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .05), 0 0 4px rgba(0, 0, 0, .33) inset;
+    -webkit-transition: .3s;
+    transition: .3s
+  }
+  
+  .barPie__ring__item:nth-of-type(1) {
+    -webkit-transform: rotate(11.25deg);
+    -ms-transform: rotate(11.25deg);
+    transform: rotate(11.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(1)::before {
+    -webkit-transition-delay: 12ms;
+    transition-delay: 12ms
+  }
+  
+  .barPie__ring__item:nth-of-type(2) {
+    -webkit-transform: rotate(22.5deg);
+    -ms-transform: rotate(22.5deg);
+    transform: rotate(22.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(2)::before {
+    -webkit-transition-delay: 24ms;
+    transition-delay: 24ms
+  }
+  
+  .barPie__ring__item:nth-of-type(3) {
+    -webkit-transform: rotate(33.75deg);
+    -ms-transform: rotate(33.75deg);
+    transform: rotate(33.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(3)::before {
+    -webkit-transition-delay: 36ms;
+    transition-delay: 36ms
+  }
+  
+  .barPie__ring__item:nth-of-type(4) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(4)::before {
+    -webkit-transition-delay: 48ms;
+    transition-delay: 48ms
+  }
+  
+  .barPie__ring__item:nth-of-type(5) {
+    -webkit-transform: rotate(56.25deg);
+    -ms-transform: rotate(56.25deg);
+    transform: rotate(56.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(5)::before {
+    -webkit-transition-delay: 60ms;
+    transition-delay: 60ms
+  }
+  
+  .barPie__ring__item:nth-of-type(6) {
+    -webkit-transform: rotate(67.5deg);
+    -ms-transform: rotate(67.5deg);
+    transform: rotate(67.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(6)::before {
+    -webkit-transition-delay: 72ms;
+    transition-delay: 72ms
+  }
+  
+  .barPie__ring__item:nth-of-type(7) {
+    -webkit-transform: rotate(78.75deg);
+    -ms-transform: rotate(78.75deg);
+    transform: rotate(78.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(7)::before {
+    -webkit-transition-delay: 84ms;
+    transition-delay: 84ms
+  }
+  
+  .barPie__ring__item:nth-of-type(8) {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(8)::before {
+    -webkit-transition-delay: 96ms;
+    transition-delay: 96ms
+  }
+  
+  .barPie__ring__item:nth-of-type(9) {
+    -webkit-transform: rotate(101.25deg);
+    -ms-transform: rotate(101.25deg);
+    transform: rotate(101.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(9)::before {
+    -webkit-transition-delay: 108ms;
+    transition-delay: 108ms
+  }
+  
+  .barPie__ring__item:nth-of-type(10) {
+    -webkit-transform: rotate(112.5deg);
+    -ms-transform: rotate(112.5deg);
+    transform: rotate(112.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(10)::before {
+    -webkit-transition-delay: 120ms;
+    transition-delay: 120ms
+  }
+  
+  .barPie__ring__item:nth-of-type(11) {
+    -webkit-transform: rotate(123.75deg);
+    -ms-transform: rotate(123.75deg);
+    transform: rotate(123.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(11)::before {
+    -webkit-transition-delay: 132ms;
+    transition-delay: 132ms
+  }
+  
+  .barPie__ring__item:nth-of-type(12) {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(12)::before {
+    -webkit-transition-delay: 144ms;
+    transition-delay: 144ms
+  }
+  
+  .barPie__ring__item:nth-of-type(13) {
+    -webkit-transform: rotate(146.25deg);
+    -ms-transform: rotate(146.25deg);
+    transform: rotate(146.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(13)::before {
+    -webkit-transition-delay: 156ms;
+    transition-delay: 156ms
+  }
+  
+  .barPie__ring__item:nth-of-type(14) {
+    -webkit-transform: rotate(157.5deg);
+    -ms-transform: rotate(157.5deg);
+    transform: rotate(157.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(14)::before {
+    -webkit-transition-delay: 168ms;
+    transition-delay: 168ms
+  }
+  
+  .barPie__ring__item:nth-of-type(15) {
+    -webkit-transform: rotate(168.75deg);
+    -ms-transform: rotate(168.75deg);
+    transform: rotate(168.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(15)::before {
+    -webkit-transition-delay: 180ms;
+    transition-delay: 180ms
+  }
+  
+  .barPie__ring__item:nth-of-type(16) {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(16)::before {
+    -webkit-transition-delay: 192ms;
+    transition-delay: 192ms
+  }
+  
+  .barPie__ring__item:nth-of-type(17) {
+    -webkit-transform: rotate(191.25deg);
+    -ms-transform: rotate(191.25deg);
+    transform: rotate(191.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(17)::before {
+    -webkit-transition-delay: 204ms;
+    transition-delay: 204ms
+  }
+  
+  .barPie__ring__item:nth-of-type(18) {
+    -webkit-transform: rotate(202.5deg);
+    -ms-transform: rotate(202.5deg);
+    transform: rotate(202.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(18)::before {
+    -webkit-transition-delay: 216ms;
+    transition-delay: 216ms
+  }
+  
+  .barPie__ring__item:nth-of-type(19) {
+    -webkit-transform: rotate(213.75deg);
+    -ms-transform: rotate(213.75deg);
+    transform: rotate(213.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(19)::before {
+    -webkit-transition-delay: 228ms;
+    transition-delay: 228ms
+  }
+  
+  .barPie__ring__item:nth-of-type(20) {
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(20)::before {
+    -webkit-transition-delay: 240ms;
+    transition-delay: 240ms
+  }
+  
+  .barPie__ring__item:nth-of-type(21) {
+    -webkit-transform: rotate(236.25deg);
+    -ms-transform: rotate(236.25deg);
+    transform: rotate(236.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(21)::before {
+    -webkit-transition-delay: 252ms;
+    transition-delay: 252ms
+  }
+  
+  .barPie__ring__item:nth-of-type(22) {
+    -webkit-transform: rotate(247.5deg);
+    -ms-transform: rotate(247.5deg);
+    transform: rotate(247.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(22)::before {
+    -webkit-transition-delay: 264ms;
+    transition-delay: 264ms
+  }
+  
+  .barPie__ring__item:nth-of-type(23) {
+    -webkit-transform: rotate(258.75deg);
+    -ms-transform: rotate(258.75deg);
+    transform: rotate(258.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(23)::before {
+    -webkit-transition-delay: 276ms;
+    transition-delay: 276ms
+  }
+  
+  .barPie__ring__item:nth-of-type(24) {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(24)::before {
+    -webkit-transition-delay: 288ms;
+    transition-delay: 288ms
+  }
+  
+  .barPie__ring__item:nth-of-type(25) {
+    -webkit-transform: rotate(281.25deg);
+    -ms-transform: rotate(281.25deg);
+    transform: rotate(281.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(25)::before {
+    -webkit-transition-delay: 300ms;
+    transition-delay: 300ms
+  }
+  
+  .barPie__ring__item:nth-of-type(26) {
+    -webkit-transform: rotate(292.5deg);
+    -ms-transform: rotate(292.5deg);
+    transform: rotate(292.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(26)::before {
+    -webkit-transition-delay: 312ms;
+    transition-delay: 312ms
+  }
+  
+  .barPie__ring__item:nth-of-type(27) {
+    -webkit-transform: rotate(303.75deg);
+    -ms-transform: rotate(303.75deg);
+    transform: rotate(303.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(27)::before {
+    -webkit-transition-delay: 324ms;
+    transition-delay: 324ms
+  }
+  
+  .barPie__ring__item:nth-of-type(28) {
+    -webkit-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    transform: rotate(315deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(28)::before {
+    -webkit-transition-delay: 336ms;
+    transition-delay: 336ms
+  }
+  
+  .barPie__ring__item:nth-of-type(29) {
+    -webkit-transform: rotate(326.25deg);
+    -ms-transform: rotate(326.25deg);
+    transform: rotate(326.25deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(29)::before {
+    -webkit-transition-delay: 348ms;
+    transition-delay: 348ms
+  }
+  
+  .barPie__ring__item:nth-of-type(30) {
+    -webkit-transform: rotate(337.5deg);
+    -ms-transform: rotate(337.5deg);
+    transform: rotate(337.5deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(30)::before {
+    -webkit-transition-delay: 360ms;
+    transition-delay: 360ms
+  }
+  
+  .barPie__ring__item:nth-of-type(31) {
+    -webkit-transform: rotate(348.75deg);
+    -ms-transform: rotate(348.75deg);
+    transform: rotate(348.75deg)
+  }
+  
+  .barPie__ring__item:nth-of-type(31)::before {
+    -webkit-transition-delay: 372ms;
+    transition-delay: 372ms
+  }
+  
+  .barPie__ring__item:nth-of-type(32) {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }

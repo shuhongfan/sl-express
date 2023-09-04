@@ -1,0 +1,101 @@
+body,
+uni-page-body {
+	background: var(--neutral-color-background) !important;
+}
+.dateBox {
+	padding: 14rpx 60rpx 24rpx 40rpx;
+	line-height: 40rpx;
+	background: var(--neutral-color-white);
+	border-bottom: 1px solid var(--neutral-color-background);
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+  position: fixed;
+	z-index: 2;
+	top: 264rpx;
+	::v-deep & > view {
+		&:nth-child(2) {
+			text-align: center;
+			flex: 1;
+		}
+		&:last-child {
+			text-align: right;
+		}
+		.date {
+			width: 300rpx;
+			height: 60rpx;
+			line-height: 60rpx;
+			margin: 0 auto;
+			background: var(--neutral-color-background);
+			border-radius: 8rpx;
+			display: flex;
+			align-items: center;
+			padding: 0 16rpx;
+			.dateIcon {
+				width: 34rpx;
+				height: 36rpx;
+				background: url(@/static/date.png) no-repeat;
+				background-size: contain;
+				margin-right: 22rpx;
+			}
+			text {
+				flex: 1;
+			}
+			.next {
+				width: 30rpx;
+				height: 23rpx;
+				background: url(@/static/icon15.png) no-repeat 50% 50%;
+				background-size: contain;
+				transform: rotate(90deg);
+			}
+		}
+		.noDate {
+			.dateIcon {
+				background: url(@/static/dateno.png) no-repeat;
+				background-size: contain;
+			}
+			text {
+				color: #bfbfbf;
+			}
+			.next {
+				background: url(@/static/icon16.png) no-repeat 50% 50%;
+				background-size: contain;
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	:deep(.red){
+		color: var(--essential-color-red);
+	}
+	:deep(.gray){
+		color: var(--neutral-color-placeholder);
+	}
+}
+.history{
+	background: var(--neutral-color-white);
+	padding: 30rpx;
+	::v-deep .navBox {
+		top: 148rpx !important;
+		.uni-navbar {
+			padding: 40rpx !important;
+		}
+	}
+}
+::v-deep .historyTab{
+	width: 100% !important;
+	border-top: 1px solid var(--neutral-color-background);
+	position: fixed;
+	top: 361rpx;
+	z-index: 1;
+	.scroll-row-item{
+		margin-right: 128rpx;
+	}
+}
+::v-deep .uni-datetime-picker--btn,::v-deep .uni-calendar-item__weeks-box .uni-calendar-item--checked{
+	background-color: var(--essential-color-red);
+}
+::v-deep .uni-calendar-item__weeks-box-text{
+	color: var(--neutral-color-main);
+}
+

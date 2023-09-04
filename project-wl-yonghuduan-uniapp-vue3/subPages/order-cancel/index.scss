@@ -1,0 +1,61 @@
+.order-cancel{
+	background-color:#F3F5F9 ;
+	.orderCancel-bg{
+		width: 100%;
+		height: 236rpx;
+	}
+	.cancel{
+		background: #FFFFFF;
+		border-radius: 24rpx;
+		margin: 0 20rpx;
+		padding: 29rpx;
+		.customerBox,.senderBox{
+			border-bottom: 2rpx solid #F5F5F5;
+			padding-bottom: 46rpx;
+			.title{
+				font-size: 26rpx;
+				font-weight: bold;
+				margin-bottom: 20rpx;
+			}
+			.reason-item{
+				display: flex;
+				align-items: center;
+				margin-top: 26rpx;
+				font-size: 28rpx;
+				.label{
+					margin-left: 9rpx;
+				}
+			}
+		}
+		.senderBox{
+			margin-top: 28rpx;
+			border-bottom: none;
+		}
+	}
+	.footer{
+		height: 164rpx;
+		background-color: white;
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		justify-content: center;
+		.cancel-btn,.confirm-btn{
+			width: 276rpx;
+			height: 88rpx;
+			border-radius: 44rpx;
+			text-align: center;
+			line-height: 88rpx;
+			margin-top: 17rpx;
+		}
+		.cancel-btn{
+			border: 2rpx solid #191919;
+			margin-right: 20rpx;
+		}
+		.confirm-btn{
+			background: #E84134;
+			color: white;
+			margin-left: 20rpx;
+		}
+	}
+}

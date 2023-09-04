@@ -1,0 +1,117 @@
+.goBack{
+	position: absolute;
+	width: 40rpx;
+	height: 40rpx;
+	z-index: 2;
+	left: 26rpx;
+}
+.authentication-success{
+	position: relative;
+	image{
+		width: 100%;
+		height: 540rpx;
+	}
+	.tips{
+		position: absolute;
+		left: 66rpx;
+		font-size: 26rpx;
+		font-weight: bold;
+		color: white;
+		width: 480rpx;
+		height: 72rpx;
+		top: 188rpx;
+	}
+	.info{
+		position: relative;
+		bottom: 230rpx;
+		height: 278rpx;
+		background: #FFFFFF;
+		box-shadow: 0 4rpx 38rpx 0 rgba(66,77,84,0.00);
+		border-radius: 24rpx;
+		margin: 0 30rpx;
+		position: relative;
+		.bg{
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.info-top{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			z-index: 3;
+			.success{
+				width: 152rpx;
+				height: 122rpx;
+				margin: 22rpx 16rpx 0 0;
+			}
+			.info-person{
+				display: flex;
+				margin: 50rpx 0 0 32rpx;
+				.headUrl{
+					height: 116rpx;
+					width: 116rpx;
+					margin-right: 32rpx;
+				}
+				.info-box{
+					.name{
+						font-size: 32rpx;
+						font-weight: bold;
+						margin-top: 10rpx;
+						margin-bottom: 14rpx;
+					}
+					.identify-num{
+						font-size: 26rpx;
+						color: #919191;
+					}
+				}
+			}
+		}
+		.info-title{
+			position: absolute;
+			bottom: 40rpx;
+			left: 27rpx;
+			display: flex;
+			align-items: center;
+			font-size:24rpx ;
+			color:#919191 ;
+			image{
+				width:40rpx ;
+				height:40rpx ;
+				margin-right: 6rpx;
+			}
+		}
+	}
+	.btn{
+		width: 560rpx;
+		height: 90rpx;
+		background: #FFFFFF;
+		border-radius: 44rpx;
+		margin: 82rpx auto 0;
+		font-size: 30rpx;
+		font-weight: bold;
+		text-align: center;
+		line-height: 90rpx;
+		position: relative;
+		bottom: 230rpx;
+	}
+	::v-deep .uni-popup-dialog{
+		.uni-button-color{
+			color: #E84134!important;
+		}
+		.uni-dialog-content{
+			font-size: 28rpx;
+			color:#919191 ;
+			text-align: center;
+		}
+		.uni-dialog-title{
+			.uni-dialog-title-text {
+				font-size: 32rpx;
+				color: #323233;
+			}
+		}
+	}
+}

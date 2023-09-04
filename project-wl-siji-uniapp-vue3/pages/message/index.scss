@@ -1,0 +1,130 @@
+body,
+uni-page-body {
+	background: var(--neutral-color-background) !important;
+}
+.newBox {
+	.tabScroll {
+		background: var(--neutral-color-white);
+		::v-deep .uni-scroll-view-content {
+			font-size: var(--font-size-14) !important;
+			.scroll-row-item {
+				flex: 1;
+				text-align: center;
+				margin-right: 0;
+			}
+		}
+	}
+}
+::v-deep .newConBox {
+	.item {
+		line-height: 40rpx;
+		padding: 0 28rpx;
+		color: var(--neutral-color-font);
+		position: relative;
+		font-size: var(--font-size-12);
+		.navigator-wrap{
+			uni-navigator{
+				display: flex;
+				align-items: center;
+			}
+		}
+		.text {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			flex: 1;
+			padding: 32rpx 0 28rpx;
+			border-bottom: 1px solid var(--neutral-color-background);
+			view{
+				&:first-child{
+				color: var(--neutral-color-main);
+				font-size: var(--font-size-14);
+				padding-bottom: 4rpx;
+			}
+			}
+			
+		}
+		.icon {
+			width: 64rpx;
+			height: 64rpx;
+			margin-right: 36rpx;
+			position: relative;
+			&.send {
+				// background: url(@/static/icon17.png);
+				background-size: contain;
+			}
+			&.income {
+				// background: url(@/static/icon18.png);
+				background-size: contain;
+				
+			}
+			&.cancel {
+				// background: url(@/static/icon19.png);
+				background-size: contain;
+			}
+			&.active {
+				color: var(--neutral-color-main);
+				icon {
+					position: absolute;
+					right: -14rpx;
+					top: 2rpx;
+					width: 14rpx;
+					height: 14rpx;
+					border-radius: 50%;
+					margin-right: 12rpx;
+					background: var(--essential-color-red);
+				}
+			}
+		}
+		.time{
+			position: absolute;
+			top: 32rpx;
+			right: 44rpx;
+		}
+		
+	}
+}
+// 详情
+.scrollSet{
+	height: calc(100vh - 300rpx);
+}
+
+// 系统列表
+.systemList{
+	.item{
+		padding:32rpx 32rpx 40rpx 32rpx;
+		color: var(--neutral-color-font);
+		line-height: 52rpx;
+		margin-top: 40rpx;
+		.tit{
+			line-height: 40rpx;
+			padding-bottom: 26rpx;
+			color: var(--neutral-color-main);
+			border-bottom: 1px solid #f4f4f4;
+			margin-bottom: 26rpx;
+			font-weight: 400;
+			font-size: 28rpx;
+		}
+		.time{
+			display: flex;
+			align-items: center;
+			font-size: 24rpx;
+			text{
+				flex:1
+			}
+			.redBtn{
+				display: inline-block;
+				width: 162rpx;
+				height: 48rpx;
+				line-height: 48rpx;
+				border: 2rpx solid #EF4F3F;
+				font-size: 24rpx;
+			}
+		}
+		.address{
+			font-size: 26rpx;
+			line-height: 40rpx;
+			margin-bottom: 18rpx;
+		}
+	}
+}

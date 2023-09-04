@@ -1,0 +1,143 @@
+.mnav-bg{
+	height: 370rpx;
+}
+.header {
+	padding: 122rpx 86rpx 102rpx 64rpx;
+	color: var(--neutral-color-white);
+	display: flex;
+	align-items: center;
+	line-height: 40rpx;
+	font-size: var(--font-size-16);
+	.headBox {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		.head {
+			icon{
+				background: url(@/static/head.png) no-repeat;
+				background-size: contain;
+				width: 116rpx;
+				height: 116rpx;
+			}
+			image{
+				width: 114rpx;
+				height: 114rpx;
+			}
+			
+			padding-right: 26rpx;
+		}
+		.tit {
+			padding-bottom: 2rpx;
+		}
+		.address {
+			display: flex;
+			align-items: center;
+			font-size: var(--font-size-14);
+			padding-top: 8rpx;
+			icon {
+				background: url(@/static/address.png) no-repeat;
+				background-size: contain;
+				width: 32rpx;
+				height: 32rpx;
+				margin-right: 8rpx;
+			}
+		}
+		.info {
+			flex: 1;
+			font-size: var(--font-size-16);
+		}
+	}
+	.QR {
+		image {
+			width: 48rpx;
+			height: 48rpx;
+			margin-top: 16rpx;
+		}
+	}
+}
+.headTop {
+	margin-top: -80rpx;
+}
+.headItem {
+	padding: 0 34rpx;
+	font-size: var(--font-size-16);
+	.item {
+		height: 100rpx;
+		line-height: 100rpx;
+		border-bottom: 1px solid var(--neutral-color-background);
+		display: flex;
+		align-items: center;
+		// &:last-child {
+		// 	border: 0 none;
+		// }
+		text {
+			&:first-child {
+				flex: 1;
+			}
+		}
+	}
+}
+.star {
+	display: flex;
+	align-items: center;
+	::v-deep .uni-icons {
+		font-size: 48rpx !important;
+	}
+	::v-deep .uni-rate__icon {
+		margin-right: 6rpx !important;
+	}
+	// icon {
+	// 	background: url(@/static/star.png) no-repeat;
+	// 	background-size: contain;
+	// 	width: 32rpx;
+	// 	height: 32rpx;
+	// 	margin-left: 16rpx;
+	// }
+}
+.boxBg {
+	margin-bottom: 32rpx;
+}
+.qrCode {
+	.boxBg {
+		margin-top: 32rpx;
+		text-align: center;
+		padding: 52rpx 60rpx 68rpx;
+	}
+	.img {
+		padding: 30rpx 0;
+		image {
+			width: 416rpx;
+			height: 410rpx;
+		}
+	}
+}
+.qrHead {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	width: 416rpx;
+	margin: 0 auto;
+	
+	.head {
+		background: url(@/static/head.png) no-repeat;
+		background-size: contain;
+		width: 86rpx;
+		height: 86rpx;
+		margin-right: 20rpx;
+		margin-left:20rpx;
+	}
+	.star {
+		font-size: 20rpx;
+		::v-deep .uni-icons {
+			font-size: 28rpx !important;
+		}
+		::v-deep .uni-rate__icon {
+			margin-right: 4rpx !important;
+		}
+	}
+	.tit{
+		font-size: var(--font-size-13);
+		font-weight: 600;
+		padding-bottom: 4rpx;
+	}
+}

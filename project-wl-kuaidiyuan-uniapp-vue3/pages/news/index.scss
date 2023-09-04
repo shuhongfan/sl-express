@@ -1,0 +1,124 @@
+body,
+uni-page-body {
+	background: var(--neutral-color-background) !important;
+}
+.newBox {
+	.tabScroll {
+		margin-bottom: 32rpx;
+		background: var(--neutral-color-white);
+		::v-deep .uni-scroll-view-content {
+			font-size: var(--font-size-14) !important;
+			.scroll-row-item {
+				flex: 1;
+				text-align: center;
+				margin-right: 0;
+			}
+		}
+	}
+}
+::v-deep .newConBox {
+	.item {
+		line-height: 40rpx;
+		padding: 0 28rpx;
+		
+		
+		color: var(--neutral-color-font);
+		position: relative;
+		font-size: var(--font-size-12);
+		.navigator-wrap{
+			uni-navigator{
+				display: flex;
+				align-items: center;
+			}
+		}
+		.text {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			flex: 1;
+			padding: 32rpx 0 28rpx;
+			border-bottom: 1px solid var(--neutral-color-background);
+			view{
+				&:first-child{
+				color: var(--neutral-color-main);
+				font-size: var(--font-size-14);
+				padding-bottom: 4rpx;
+			}
+			}
+			
+		}
+		.icon {
+			width: 64rpx;
+			height: 64rpx;
+			margin-right: 36rpx;
+			position: relative;
+			&.send {
+				background: url(@/static/icon17.png);
+				background-size: contain;
+			}
+			&.delivery {
+				background: url(@/static/icon27.png);
+				background-size: contain;
+			}
+			&.income {
+				background: url(@/static/icon18.png);
+				background-size: contain;
+				
+			}
+			&.cancel {
+				background: url(@/static/icon19.png);
+				background-size: contain;
+			}
+			&.active {
+				color: var(--neutral-color-main);
+				icon {
+					position: absolute;
+					right: -14rpx;
+					top: 2rpx;
+					width: 14rpx;
+					height: 14rpx;
+					border-radius: 50%;
+					margin-right: 12rpx;
+					background: var(--essential-color-red);
+				}
+			}
+		}
+		.time{
+			position: absolute;
+			top: 32rpx;
+			right: 44rpx;
+		}
+		
+	}
+}
+// 详情
+
+// 系统列表
+.systemList{
+	.item{
+		padding:30rpx 32rpx;
+		color: var(--neutral-color-font);
+		line-height: 52rpx;
+		margin-top: 40rpx;
+		.tit{
+			line-height: 40rpx;
+			padding-bottom: 30rpx;
+			color: var(--neutral-color-main);
+			border-bottom: 1px solid var(--neutral-color-background);
+			margin-bottom: 22rpx;
+			font-weight: 600;
+		}
+		.time{
+			display: flex;
+			align-items: center;
+			text{
+				flex:1
+			}
+			.redBtn{
+				display: inline-block;
+				
+			}
+		}
+		
+	}
+}

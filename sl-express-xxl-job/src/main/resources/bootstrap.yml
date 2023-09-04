@@ -1,0 +1,18 @@
+application:
+  version: v1.0
+spring:
+  application:
+    name: sl-express-xxl-job
+server:
+  port: 9901
+xxl:
+  job:
+    admin:
+      addresses: http://192.168.150.101:28080/xxl-job-admin
+    executor:
+      ip: 192.168.150.1
+      appname: ${spring.application.name}
+      #执行器运行日志文件存储磁盘路径
+      logpath: /data/applogs/xxl-job/jobhandler
+      #执行器日志文件保存天数
+      logretentiondays: 30

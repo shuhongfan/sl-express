@@ -1,0 +1,178 @@
+.order-success{
+	background-color:#F3F5F9 ;
+	height: 90vh;
+	.header{
+		margin: 40rpx 50rpx;
+		margin-top: 0rpx;
+		padding-top: 40rpx;
+		.title{
+			display: flex;
+			align-items: center;
+			margin-bottom: 26rpx;
+			font-size: 42rpx;
+			font-weight:bold;
+			.success-img{
+				margin-right: 18rpx;
+				width: 60rpx;
+				height: 60rpx;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../../static/order-success.png');
+			}
+			uni-text{
+				font-size: 42rpx;
+				font-weight: bold;
+			}
+		}
+		.send-time{
+			font-size: 32rpx;
+			uni-text:first-child{
+				margin-right:36rpx ;
+			}
+		}
+		.tips{
+			font-size: 24rpx;
+			color: #888;
+			margin-top: 10rpx;
+		}
+	}
+	.orderBox{
+		background: #FFFFFF;
+		border-radius: 20rpx;
+		padding: 40rpx 28rpx;
+		margin: 0 18rpx;
+		.order-detail{
+			display: flex;
+			.left{
+				margin-right: 20rpx;
+				.send,.get{
+					width: 40rpx;
+					height: 40prx;
+					border-radius: 50%;
+					text-align: center;
+					line-height: 40rpx;
+					font-size: 24rpx;
+				}
+				.send{
+					background: #000000;
+					color: white;
+				}
+				.get{
+					background: #E63E32;
+					color: white;
+				}
+				.line{
+					width: 2rpx;
+					height: 123rpx;
+					border-left: 2rpx dashed #D5D1D1;
+					margin-left: 18rpx;
+				}
+				.active{
+					height: 155rpx;
+				}
+				
+			}
+			.right{
+				width: 100%;
+				position: relative;
+				.send-people,.get-people{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.send-title{
+						height: 100%;
+					}
+					.send-sub-title{
+						color: #151515;
+						font-size: 32rpx;
+						margin-bottom: 12rpx;
+						font-weight: bold;
+					}
+					.send-desc{
+						color: #888888;
+						font-size: 24rpx;
+					}
+					.address-enter{
+						font-weight: bold;
+						border-left: 2rpx solid #F4F4F4;
+						padding-left: 28rpx;
+						font-size: 24rpx;
+					}
+				}
+				.get-people{
+					margin-bottom: 40rpx;
+				}
+				.send-people{
+					margin-bottom: 40rpx;
+				}
+				.line{
+					width: 100%;
+					height: 2rpx;
+					background-color: #F4F4F4;
+					margin-bottom: 40rpx;
+				}
+			}
+		}
+		.price-detail{
+			border-bottom: 2rpx solid #F3F4F7;
+			border-top: 2rpx solid #F3F4F7;
+			padding: 40rpx 0;
+			.goods,.weight,.payType,.base-price{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 28rpx;
+				.label,.value{
+					font-size: 24rpx;
+				}
+				.label{
+					color: #888;
+				}
+			}
+			.goods{
+				margin-top: 0rpx;
+			}
+		}
+		.all-account{
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			color: #888;
+			font-size: 24rpx;
+			margin-top: 41rpx;
+			text{
+				color: #E84134;
+				font-size: 28rpx;
+				font-weight: bold;
+			}
+		}
+	}
+	.feature{
+		display: flex;
+		margin-left: 81rpx;
+		margin-top: 48rpx;
+		.order-info,.order-share,.order-again{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			.img-box{
+				width: 76rpx;
+				height: 76rpx;
+				background: #FFFFFF;
+				border-radius: 50%;
+				margin-bottom: 10rpx;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				image{
+					width:76rpx ;
+					height:76rpx ;
+				}
+			}
+			.title{
+				font-size: 24rpx;
+			}
+			margin-right: 80rpx;
+		}
+	}
+}

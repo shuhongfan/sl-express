@@ -1,0 +1,147 @@
+{
+	"pages": [
+		{
+			"path": "pages/start/index", // 引导页
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/user",  // 登录-用户名密码登录
+			"style": {
+				"navigationStyle": "custom" 
+			}
+		},
+		{
+			"path": "pages/login/index", // 登录-手机号验证码登录
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index", // 任务 - 待提货
+			"style": {
+				"navigationStyle": "custom",
+				// "enablePullDownRefresh": true
+				"pullToRefresh": {
+					"support": true,
+					"color": "#ff3333",
+					"style": "default",
+					"contentdown": {
+						"caption": "下拉可刷新自定义文本"
+					},
+					"contentover": {
+						"caption": "释放可刷新自定义文本"
+					},
+					"contentrefresh": {
+						"caption": "正在刷新自定义文本"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/index/delayed", // 任务 - 待提货 - 延迟提货
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/details", // 任务 - 待提货 - 详情
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/detailsRoad", // 任务 - 待提货 - 详情
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/detailsSuccess", // 任务 - 已完成 - 详情
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/exception", // 任务 - 完成 - 上报异常
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/refister", // 任务 - 完成 - 回车等级
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/message/index",  // 消息首页
+			"style": {
+				"navigationStyle": "custom" //自定义头部
+			}
+		},
+		{
+			"path": "pages/message/details",  // 消息首页 - 详情
+			"style": {
+				"navigationStyle": "custom" //自定义头部
+			}
+		},
+		{
+			"path": "pages/user/index", // 我的 - 我的
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/carrier", // 我的 - 容器
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/setCarrier", // 我的 - 设置相关容器
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}
+		
+	],
+	// "tabBar": {
+	//     "list": [{
+	// 		"pagePath": "/pages/index/index", 
+	// 		"iconPath": "static/sj_test_nor.png", 
+	// 		"selectedIconPath": "static/sj_test_sel.png", 
+	// 		"text": "任务"
+	// 	},{
+	// 		"pagePath": "/pages/message/index", 
+	// 		"iconPath": "static/sj_mess_nor.png", 
+	// 		"selectedIconPath": "static/sj_mess_sel.png", 
+	// 		"text": "消息"
+	// 	},{
+	// 		"pagePath": "/pages/user/index", 
+	// 		"iconPath": "static//sj_mine_nor.png", 
+	// 		"selectedIconPath": "static//sj_mine_sel.png", 
+	// 		"text": "我的"
+	// 	}]
+	//   },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "神领快递",
+		"navigationBarBackgroundColor": "#F4F4F4",
+		"backgroundColor": "#F4F4F4",
+		"app-plus": {
+			"background": "#F4F4F4"
+		}
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

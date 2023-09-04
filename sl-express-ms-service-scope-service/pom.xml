@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.sl-express</groupId>
+        <artifactId>sl-express-parent</artifactId>
+        <version>1.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sl-express.ms.service-scope</groupId>
+    <artifactId>sl-express-ms-service-scope-service</artifactId>
+    <version>1.1-SNAPSHOT</version>
+    <description>服务范围微服务</description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <sl-express-common.version>1.2-SNAPSHOT</sl-express-common.version>
+        <sl-express-ms-service-scope-domain.version>1.1-SNAPSHOT</sl-express-ms-service-scope-domain.version>
+        <gson.version>2.8.5</gson.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sl-express.common</groupId>
+            <artifactId>sl-express-common</artifactId>
+            <version>${sl-express-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sl-express.ms.service-scope</groupId>
+            <artifactId>sl-express-ms-service-scope-domain</artifactId>
+            <version>${sl-express-ms-service-scope-domain.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.itheima.em</groupId>
+            <artifactId>eaglemap-spring-boot-starter</artifactId>
+            <version>${eaglemap.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--指定主类-->
+                    <mainClass>com.sl.ServiceScopeApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

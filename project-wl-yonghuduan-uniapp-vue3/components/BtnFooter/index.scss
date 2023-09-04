@@ -1,0 +1,21 @@
+.BtnFooter{
+	position: fixed;
+	bottom: 0;
+	height: 172rpx;
+	width: 100%;
+	background-color: white;
+	.btn{
+		width: 404rpx;
+		height: 88rpx;
+		background: #CCCCCC;
+		border-radius: 44rpx;
+		color: white;
+		font-size: 30rpx;
+		text-align: center;
+		line-height: 88rpx;
+		margin: 24rpx auto 0;
+	}
+	.btn.active{
+		background-color:#E84134 ;
+	}
+}

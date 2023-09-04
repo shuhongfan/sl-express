@@ -1,0 +1,130 @@
+.selectArea{
+	::v-deep .uni-popup__wrapper {
+		height: 1160rpx;
+		background-color: white !important;
+		border-radius: 24rpx 24rpx 0 0;
+	}
+	.header {
+		display: flex;
+		height: 56rpx;
+		padding: 30rpx 38rpx;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 24rpx 24rpx 0 0;
+	
+		.header-title {
+			font-size: 32rpx;
+			color: #151515;
+			font-weight: bold;
+		}
+	
+		.close {
+			width: 24rpx;
+			height: 24rpx;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../../../static/icon21.png');
+		}
+	}
+	.seachBox{
+		::v-deep .uni-searchbar{
+			padding-left: 38rpx!important;
+			.uni-searchbar__box{
+				border-radius: 34rpx!important;
+			}
+		}
+		.search-icon{
+			width: 40rpx;
+			height: 40rpx;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../../../static/search.png');
+		}
+	}
+	.hot-city{
+		margin-top: 31rpx;
+		border-bottom: 2rpx solid #F4F4F4;
+		padding-bottom: 40rpx;
+		margin: 0 38rpx;
+		.title{
+			font-size: 24rpx;
+			color: #888;
+		}
+		.city-box{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.city-item{
+				font-size: 24rpx;
+				height: 64rpx;
+				background: #F4F4F4;
+				border-radius: 34rpx;
+				min-width: 148rpx;
+				margin-top: 18rpx;
+				text-align: center;
+				line-height: 64rpx;
+			}
+			.city-item.active{
+				border: 2rpx solid #E84134;
+				color: #E84134;
+				background-color: white;
+			}
+		}
+	}
+	.province-city-area{
+		margin-top: -10rpx;
+		.picker-view {
+			width: 750rpx;
+			height: 600rpx;
+			margin-top: 20rpx;
+		}
+		.item {
+			height: 50px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			display: flex;
+		}
+		::v-deep .uni-picker-view-wrapper{
+			.uni-picker-view-mask{
+				display: none;
+			}
+			.uni-picker-view-indicator{
+				top: 46%!important;
+			}
+		}
+	
+		.label-box{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 40rpx 90rpx;
+			.label{
+				font-size: 30rpx;
+				font-weight: bold;
+			}
+		}
+	}
+	.footer{
+		height: 168rpx;
+		width: 100%;
+		background-color: white;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		padding-top: 80rpx;
+		display: flex;
+		align-items: center;
+		.btn{
+			width: 404rpx;
+			height: 88rpx;
+			background: #E84134;
+			border-radius: 44rpx;
+			color:white ;
+			text-align: center;
+			line-height: 88rpx;
+			font-size: 30rpx;
+			margin: 0 auto;
+		}
+	}
+}

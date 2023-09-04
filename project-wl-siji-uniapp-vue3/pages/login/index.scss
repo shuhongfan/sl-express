@@ -1,0 +1,130 @@
+body,
+uni-page-body,
+uni-page-head,
+.uni-page-head {
+	background-color: var(--neutral-color-white);
+}
+.loginBox {
+	padding: 100rpx 34rpx 0 66rpx;
+	.tit {
+		line-height: 66rpx;
+		font-weight: 600;
+		font-size: 48rpx;
+		color: var(--neutral-color-main);
+		letter-spacing: 0;
+		display: flex;
+		padding-bottom: 52rpx;
+		text {
+			flex: 1;
+		}
+		.text {
+			font-weight: 500;
+			margin-right: 30rpx;
+			font-size: 32rpx;
+			color: var(--essential-color-red);
+			text-align: right;
+			line-height: 50rpx;
+			padding-top: 14rpx;
+			icon {
+				background: url(../../static/icon_go.png) no-repeat;
+				background-size: contain;
+				width: 20rpx;
+				height: 20rpx;
+				margin-left: 14rpx;
+				vertical-align: unset;
+			}
+		}
+	}
+	.loginMain {
+		::v-deep .uni-input-input{
+			color: var(--neutral-color-main);
+		}
+		padding-right: 32rpx;
+		.item {
+			::v-deep .is-input-border {
+				padding: 30rpx 0;
+				font-weight: 400;
+				font-size: 32rpx;
+				line-height: 40rpx;
+				color: #797979;
+				letter-spacing: 0.36rpx;
+				border: 0 none;
+				border-bottom: 1px solid var(--neutral-color-background);
+				position: relative;
+				border-radius: 0;
+				.uni-easyinput__placeholder-class {
+					font-size: 32rpx;
+					color: var(--neutral-color-font);
+					letter-spacing: 0.36rpx;
+				}
+				.uni-easyinput__content-input {
+					padding-left: 0 !important;
+					font-size: 32rpx;
+				}
+			}
+			::v-deep .is-input-error-border {
+				border-bottom: 1px solid var(--essential-color-red);
+				margin-bottom: 44rpx;
+			}
+			::v-deep .content-clear-icon{
+				padding: 0;
+				font-size: 28rpx !important;
+				line-height: 46rpx;
+			}
+			::v-deep .uniui-eye-filled{
+				
+				background: url(@/static/icon-close.png) 50% 50% no-repeat;
+				background-size: contain;
+				&:before{
+					color:transparent;
+				}
+			}
+			::v-deep .uniui-eye-slash-filled{
+				background: url(@/static/icon-open.png) 50% 50% no-repeat;
+				background-size: contain;
+				&:before{
+					color:transparent;
+				}
+			}
+		}
+		::v-deep .uni-forms-item__inner {
+			padding-bottom: 0;
+		}
+		::v-deep .uni-error-message {
+			bottom: -10rpx;
+		}
+		::v-deep .content-clear-icon {
+			margin-right: 30rpx;
+		}
+		.inputW{
+			::v-deep .is-input-border{
+				padding-right: 166rpx;
+			}
+		}
+		.codeBox {
+			position: absolute;
+			right: 40rpx;
+			top: 34rpx;
+			font-size: 28rpx;
+		}
+	}
+	.setUrl{
+		font-size: 24rpx;
+		color: #ccc;
+		line-height: 48rpx;
+		text-align: center;
+		margin-top: 40rpx;
+	}
+}
+.item {
+	icon {
+		position: absolute;
+		width: 32rpx;
+		height: 32rpx;
+		right: 0;
+		top: 40rpx;
+	}
+}
+.fontCol {
+	color: var(--neutral-color-font);
+}

@@ -1,0 +1,79 @@
+/* 水平间距 */
+/* 水平间距 */
+.loginBox.data-v-4586967a {
+  background-color: white;
+  height: 100vh;
+}
+.loginBox.data-v-4586967a .uni-popup__wrapper {
+  height: 500rpx;
+  background-color: white !important;
+  border-radius: 24rpx 24rpx 0 0;
+  padding: 65rpx 39rpx 180rpx;
+}
+.loginBox .logo-box.data-v-4586967a {
+  text-align: center;
+  margin-top: 204rpx;
+}
+.loginBox .logo-box image.data-v-4586967a {
+  width: 166rpx;
+  height: 174rpx;
+}
+.loginBox .logo-box .title.data-v-4586967a {
+  font-size: 32rpx;
+  color: #20232A;
+  font-weight: bold;
+}
+.loginBox .open-dialog.data-v-4586967a {
+  height: 88rpx;
+  background: #E63E32;
+  border-radius: 44rpx;
+  color: white;
+  text-align: center;
+  line-height: 88rpx;
+  margin: 228rpx 46rpx 0;
+}
+.loginBox uni-popup .header.data-v-4586967a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 24rpx 24rpx 0 0;
+}
+.loginBox uni-popup .header image.data-v-4586967a {
+  height: 35rpx;
+  width: 35rpx;
+}
+.loginBox uni-popup .header .title.data-v-4586967a {
+  font-weight: bold;
+  font-size: 30rpx;
+  margin: 0 auto;
+}
+.loginBox uni-popup .content.data-v-4586967a {
+  font-size: 28rpx;
+  margin-top: 35rpx;
+}
+.loginBox uni-popup .content .tips.data-v-4586967a {
+  margin-top: 50rpx;
+}
+.loginBox uni-popup .content text.data-v-4586967a {
+  font-weight: bold;
+}
+.loginBox uni-popup .footer.data-v-4586967a {
+  display: flex;
+  margin-top: 90rpx;
+}
+.loginBox uni-popup .footer .btn.data-v-4586967a {
+  width: 276rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border: 2rpx solid #E84134;
+  border-radius: 44rpx;
+  font-size: 30rpx;
+}
+.loginBox uni-popup .footer .cancel-btn.data-v-4586967a {
+  background: #FFFFFF;
+  color: #E84134;
+}
+.loginBox uni-popup .footer .agree-btn.data-v-4586967a {
+  background: #E84134;
+  color: white;
+}

@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "寄快递",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "get-time-picker": "./components/getTimePicker",
+    "pay-type-dialog": "./components/payType"
+  }
+}

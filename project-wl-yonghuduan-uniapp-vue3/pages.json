@@ -1,0 +1,189 @@
+{
+	"subPackages": [{
+		"root": "subPages",
+		"pages": [
+			// 电子存根
+			{
+				"path": "electronic-stub/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "电子存根",
+					"enablePullDownRefresh": false
+				}
+			},
+			// 实名认证成功页面
+			{
+				"path": "authentication-success/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "实名认证",
+					"enablePullDownRefresh": false
+				}
+			},
+			// 实名认证流程页面
+			{
+				"path": "realName-authentication/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "实名认证",
+					"enablePullDownRefresh": false
+				}
+			},
+			// 下单成功
+			{
+				"path": "order-success/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "下单成功",
+					"enablePullDownRefresh": false
+				}
+			},
+			// 计费规则
+			{
+				"path": "account-rules/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "计费规则",
+					"enablePullDownRefresh": false
+				}
+			},
+			// 订单详情
+			{
+				"path": "order-info/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "订单详情",
+					"enablePullDownRefresh": false
+				}
+			},
+			// 取消订单
+			{
+				"path": "order-cancel/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "取消订单",
+					"enablePullDownRefresh": false
+				}
+			},
+
+			// 地址信息填写页面
+			{
+				"path": "address-info/index",
+				"style": {
+					"navigationStyle": "custom",
+					"navigationBarTitleText": "地址信息",
+					"enablePullDownRefresh": false
+				}
+			}
+		]
+	}],
+	"pages": [
+		// 首页
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "神领物流",
+				"enablePullDownRefresh": true
+			}
+		},
+
+
+		// 寄快递
+		{
+			"path": "pages/express-delivery/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "寄快递",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 物品信息
+		{
+			"path": "pages/goodsInfo/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "物品信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 地址簿
+		{
+			"path": "pages/address/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "地址簿"
+			}
+		},
+		// 手机登录页
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+		},
+
+		// 取件
+		{
+			"path": "pages/pickup/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "派件",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 我的
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "神领物流",
+		// "navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"onReachBottomDistance": 50,
+		"enablePullDownRefresh": true
+		// "app-plus": {
+		// 	"background": "#efeff4"
+		// }
+	},
+	"condition": { // 模式配置，仅开发期间生效
+		"current": 0, // 当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", // 模式名称
+			"path": "", // 启动页面，必选
+			"query": "" // 启动参数，在页面的onLoad函数里面得到
+		}]
+	},
+	"tabBar": {
+		"borderStyle":"black",
+		"color": "#000000",
+		"selectedColor": "#E94739",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "寄快递",
+				"iconPath": "static/jikuaidi.png",
+				"selectedIconPath": "static/jikuaidiActive.png"
+			},
+			{
+				"pagePath": "pages/pickup/index",
+				"text": "查快递",
+				"iconPath": "static/chakuaidi.png",
+				"selectedIconPath": "static/chakuaidiActive.png"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"text": "我的",
+				"iconPath": "static/wode.png",
+				"selectedIconPath": "static/wodeActive.png"
+			}
+		]
+	}
+}

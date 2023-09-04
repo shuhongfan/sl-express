@@ -1,0 +1,237 @@
+body,
+uni-page-body,
+uni-page-head,
+.uni-page-head {
+	background-color: var(--neutral-color-white) !important;
+}
+.homePageBox{
+	// height: calc(100vh);
+	position: relative;
+	padding-top: 430rpx;
+	overflow: hidden;
+	.boxBg {
+		box-shadow: 0 0 22rpx 22rpx rgba(162, 162, 162, 0.06);}
+}
+.noOrder{
+	padding-top: 460rpx;
+}
+
+.infoBox {
+	margin-top: 216rpx;
+	position: relative;
+	z-index: 9;
+	// position: fixed;
+	// z-index: 10;
+	// left: 0;
+	// right: 0;
+
+	.boxBg {
+		padding: 38rpx 0;
+		// height: 200rpx;
+		display: flex;
+		box-shadow: 0 0 22rpx 22rpx rgba(162, 162, 162, 0.06);
+		& > view {
+			flex: 1;
+			text-align: center;
+			border-left: 1px solid var(--neutral-color-background);
+			font-size: var(--font-size-14);
+			line-height: 40rpx;
+			color: var(--neutral-color-font);
+			&:first-child {
+				border: 0 none;
+			}
+			.num {
+				font-weight: 600;
+				font-size: 64rpx;
+				line-height: 80rpx;
+				color: var(--neutral-color-main);
+				padding-bottom: 6rpx;
+			}
+			& > view {
+				padding-bottom: 10rpx;
+			}
+		}
+	}
+}
+.orderTip {
+	height: 68rpx;
+	line-height: 68rpx;
+	background: #fff1f0;
+	border-radius: 20rpx;
+	margin-top: 40rpx;
+	margin-bottom: 30rpx;
+	padding: 0 22rpx 0 14rpx;
+	display: flex;
+	font-size: 20rpx;
+	color: var(--essential-color-red);
+	align-items: center;
+	& > view {
+		&:nth-child(2) {
+			flex: 1;
+		}
+		&:nth-child(3) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	.btn {
+		display: inline-block;
+		width: 106rpx;
+		// height: 36rpx;
+		line-height: 34rpx;
+		// padding: 0 0 0 10rpx;
+		background: url(@/static/new.png) no-repeat;
+		background-size: contain;
+		color: var(--neutral-color-white);
+		font-size: 20rpx;
+		margin-right: 12rpx;
+		text-emphasis: none;
+		text-align: center;
+	}
+}
+// 常用功能
+.hometit {
+	line-height: 46rpx;
+	font-weight: 600;
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: var(--neutral-color-main);
+	letter-spacing: 0.36rpx;
+}
+.commonList {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	& > view {
+		box-sizing: border-box;
+
+		flex: 0 0 25%;
+		font-size: var(--font-size-12);
+		color: var(--neutral-color-font);
+		letter-spacing: 0.28px;
+		line-height: 34rpx;
+		padding: 30rpx 0;
+		text-align: center;
+		text {
+			display: block;
+		}
+		icon {
+			width: 48rpx;
+			height: 48rpx;
+			margin-bottom: 16rpx;
+			&.delivery {
+				background: url(@/static/icon03.png);
+				background-size: contain;
+			}
+			&.sign {
+				background: url(@/static/icon04.png);
+				background-size: contain;
+			}
+			&.history {
+				background: url(@/static/icon05.png);
+				background-size: contain;
+			}
+			&.new {
+				background: url(@/static/icon06.png);
+				background-size: contain;
+			}
+			&.freight {
+				background: url(@/static/icon07.png);
+				background-size: contain;
+			}
+			&.tip {
+				background: url(@/static/icon08.png);
+				background-size: contain;
+			}
+			&.exclusive {
+				background: url(@/static/icon09.png);
+				background-size: contain;
+			}
+		}
+	}
+}
+.commonData {
+	padding-top: 18rpx;
+
+	.dataList {
+		display: flex;
+		margin-left: -20rpx;
+		padding: 32rpx 0 6rpx;
+		& > view {
+			height: 112rpx;
+			border-radius: 16rpx;
+			padding: 34rpx 24rpx;
+			line-height: 34rpx;
+			flex: 1;
+			margin-left: 20rpx;
+			position: relative;
+			font-size: var(--font-size-12);
+		}
+		.rightIcon {
+			position: absolute;
+			right: 18rpx;
+			bottom: 6rpx;
+		}
+	}
+	.todayGet {
+		background-image: linear-gradient(178deg, #ffebeb 4%, #fbf3f3 100%);
+		color: #ce6864;
+		.rightIcon {
+			background: url(@/static/fetch.png) no-repeat;
+			background-size: contain;
+			width: 136rpx;
+			height: 146rpx;
+		}
+	}
+	.todaySign {
+		background-image: linear-gradient(178deg, #ffe9dd 5%, #faf3ee 100%);
+		color: #c97f59;
+		.rightIcon {
+			background: url(@/static/sign.png) no-repeat;
+			background-size: contain;
+			width: 162rpx;
+			height: 148rpx;
+		}
+	}
+	.rigIcon {
+		position: absolute;
+		right: 20rpx;
+	}
+	.num {
+		line-height: 60rpx;
+		font-size: 44rpx;
+		color: #c24340;
+		letter-spacing: 0.5px;
+		font-weight: 600;
+		padding-top: 10rpx;
+	}
+}
+// 首页查看更多
+.moreInfo {
+	font-size: var(--font-size-12);
+	padding: 62rpx 0 80rpx;
+	text-align: center;
+	line-height: 34rpx;
+	icon {
+		background: url(@/static/icon16.png) no-repeat;
+		background-size: contain;
+		width: 16rpx;
+		height: 22rpx;
+		margin-left: 6rpx;
+		flex: 1;
+		vertical-align: middle;
+		margin-top: -4rpx;
+	}
+}
+.homeSwiper{
+	padding-bottom: 136rpx;
+	::v-deep .uni-swiper-wrapper{
+		overflow: unset !important;
+		position: static !important;
+		// width: auto !important;
+		height:auto !important;
+		uni-swiper-item{
+			overflow: unset !important;
+		}
+	}
+}

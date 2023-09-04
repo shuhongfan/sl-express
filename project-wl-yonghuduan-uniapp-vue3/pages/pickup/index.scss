@@ -1,0 +1,18 @@
+
+.tabScroll {
+	.scroll-row-item {
+		margin-right: 80rpx;
+	}
+}
+.boxTop{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	box-shadow: 0 4rpx 12rpx 0 rgba(0,0,0,0.03);
+}
+.pickup{
+	min-height: 100vh!important;
+	background-color: #F3F5F9;
+}
+

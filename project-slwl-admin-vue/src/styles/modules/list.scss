@@ -1,0 +1,435 @@
+.el-table{
+  color: #20232a;
+  border: 1px solid #ebeef5;
+  border-bottom: 0;
+  // .el-table__header-wrapper{
+  //   .el-table__header{
+      thead{
+        color: #818693;
+        tr{
+          th{
+            background: #f8faff !important;
+            &:first-child{
+              .cell{
+                padding-left: 20px;
+              }
+            }
+            &:last-child{
+              .cell{
+                // padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+  //   }
+  // }
+  // .el-table__body-wrapper{
+  //   .el-table__body{
+      tr{
+        td{
+          font-size: 13px;
+          &:first-child{
+            .cell{
+              padding-left: 20px;
+            }
+          }
+          &:last-child{
+            .cell{
+              text-align: center;
+              // padding-right: 20px;
+            }
+          }
+        }
+      }
+  //   }
+  // }
+  .el-link{
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .el-link.el-link--primary{
+    color: #419EFF;
+  }
+}
+.customer-list-box{
+  .search-card-box{
+    .el-card__body{
+      padding-top: 20px;
+      padding-left: 0px;
+      // padding: 24px 16px !important;
+      .el-row{
+        margin: 0 !important;
+        .el-col{
+          // &:nth-child(3n){
+          //   padding-right: 0 !important;
+          // }
+          // &:nth-child(3n+1){
+          //   padding-left: 0 !important;
+          // }
+          .page-form-item{
+            .el-form-item__content{
+              display: flex;
+              .el-select{
+                width: calc(100% / 3);
+                margin-left: 10px;
+                &:first-child{
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+          .el-form-item{
+            margin-bottom: 20px;
+          }
+          .el-form-item__label{
+            color: #20232a;
+            font-weight: 400;
+            text-align: right;
+            padding-left: 10px;
+            box-sizing: border-box;
+            white-space: nowrap;
+          }
+          .el-input__inner{
+            border-radius: 5px !important;
+            // border: 1px solid #d8dde3;
+            border-color: #d8dde3;
+            &:hover{
+              border-color: #818693;
+            }
+            &:focus{
+              border-color: #419eff;
+            }
+          }
+          .el-button{
+            width: 90px;
+            // background-color:#E15536;
+            // color:#ffffff;
+            // border: 1px solid #E15536;
+            padding: 10px 20px !important;
+            border-radius: 5px !important;
+            font-weight: 400;
+          }
+          .reset-btn{
+            width:90px;
+            margin-left:12px;
+            // background-color: #fff;
+            // color: #2a2929;
+            border-radius: 5px;
+            // border-color: #d8dde3;
+          }
+        }
+      }
+    }
+    .mb-0{
+      margin-bottom: 0 !important;
+    }
+  }
+  .table-card-box{
+    .el-card__body{
+      padding: 28px 28px 28px 28px;
+      
+    }
+    .customer-add-btn{
+      margin-bottom:20px;
+      background-color:#E15536;
+      color:#fff;
+      border: 1px solid #E15536
+    }
+    .pagination{
+      margin: 20px 0 0px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px !important;
+      color: #20232a !important;
+      .el-select .el-input.is-focus .el-input__inner{
+        // border-color: #E15536 !important;
+      }
+      .el-pagination__total{
+        font-size: 14px !important;
+        color: #20232a !important;
+        margin-right: 35px !important;
+      }
+      .el-pagination__sizes{
+        margin: 0 28px 0 0 !important;
+      }
+      .el-pagination__sizes .el-input .el-input__inner{
+        font-size: 14px !important;
+        color: #20232a !important;
+      }
+      .el-pagination__editor.el-input{
+        width: 66px !important;
+      }
+      .el-pagination__editor{
+        padding: 0 7px;
+      }
+      .el-pagination__sizes .el-select .el-input{
+        width: 102px !important;
+        margin: 0;
+        // padding: 0 28px 0 35px !important;
+      }
+      .el-pagination__jump{
+        font-size: 14px !important;
+        color: #20232a !important;
+        margin-left: 28px !important;
+        .el-input__inner{
+          color: #20232a !important;
+        }
+      }
+      .el-pagination__sizes .el-input .el-input__inner:hover{
+        border-color:#E15536;
+      }
+      .el-pagination button:hover{
+        color: #E15536;
+      }
+      .el-pager{
+        li{
+          font-size: 14px !important;
+          &:hover{
+            color: #E15536;
+          }
+        }
+        li.active{
+          color: #E15536;
+        }
+      }
+    }
+  }
+  .table-empty-box{
+    .el-card__body{
+       padding: 28px!important
+    }
+  }
+  .loading-box{
+    background-color: #fff;
+    border-radius: 4px;
+    min-height: 350px;
+  }
+  .add-form-dialog{
+    .el-dialog__header{
+      padding: 15px 30px 15px;
+      .el-dialog__headerbtn{
+        right: 30px;
+      }
+      .el-dialog__title{
+        font-size: 18px;
+        font-weight: 400;
+        color: #20232a;
+      }
+    }
+    .el-dialog__body{
+      padding: 40px 60px 0 ;
+    }
+    .el-dialog__footer{
+      padding: 14px 30px 38px !important;
+    }
+    .el-form-item__label{
+      font-weight: 400;
+      color: #20232a;
+    }
+    .el-input__inner{
+      border: 1px solid #d8dde3;
+      border-radius: 5px;
+      color: #20232a;
+    }
+    .save-btn{
+      background-color:#E15536;
+      color:#ffffff;
+      width:90px;
+      border-radius: 5px;
+      font-weight: 400;
+      border: 1px solid #E15536;
+      &:hover{
+        background: #ffab98;
+        border: 1px solid #ffab98;
+      }
+    }
+    .cancel-btn{
+      width:90px;
+      color: #2a2929;
+      border: 1px solid #d8dde3;
+      border-radius: 5px;
+      font-weight: 400;
+      &:hover{
+        background: #ffeeeb;
+        border: 1px solid #f3917c;
+        color: #e15536;
+      }
+    }
+    .el-button+.el-button{
+      margin-left: 15px;
+    }
+    .customer-form-content{
+      .el-form-item__content{
+        display: flex;
+        >.el-date-editor,>.el-input,>.el-select{
+          width: 50%;
+          margin-left: 10px;
+          &:first-child{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .customer-dialog{
+    .el-dialog__body{
+      padding: 30px 30px 0 !important;
+      .warn-img{
+        width: 32px;
+        height: 32px;
+      }
+      p{
+        font-size: 14px;
+        margin: 10px 0 0;
+        padding: 0;
+      }
+    }
+    .el-dialog__footer{
+      padding: 26px 30px 30px;
+      text-align: center;
+      .confirm-btn{
+        background-color:#E15536;
+        color:#ffffff;
+        width:56px;
+        border: 1px solid #E15536;
+        &:hover{
+          background: #ffab98;
+          border: 1px solid #ffab98;
+        }
+      }
+      .cancel-btn{
+        width:56px;
+        color: #2a2929;
+        border: 1px solid #d8dde3;
+        &:hover{
+          background: #ffeeeb;
+          border: 1px solid #f3917c;
+          color: #e15536;
+        }
+      }
+      .el-button{
+        font-weight: 400;
+        font-size: 12px;
+        padding: 8px 0;
+        border-radius: 5px;
+      }
+    }
+    
+  }
+  
+}
+.customer-tree-box{
+  
+  .el-icon-caret-right:before{
+    content: '';
+    // content: 是一个伪元素，用来添加内容，这里是添加一个空的内容，这样就可以去掉原来的三角形了
+  }
+  .el-tree-node__label{
+    font-size: 12px;
+    font-weight: 400;
+    color: #818693;
+    margin-left: 8px;
+  }
+  .el-tree-node__content{
+    height: 30px;
+    &:hover{
+      background: transparent;
+      .el-tree-node__label{
+        color: #FF7A63 !important;
+      }
+    }
+  }
+  &.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
+    background: transparent;
+    .el-tree-node__label{
+      color: #FF7A63 !important;
+    }
+  }
+  .el-tree-node__expand-icon{
+      width: 12px;
+      height: 12px;
+  }
+  .el-tree-node__expand-icon:not(.is-leaf){
+    // margin-right: 8px;
+    background: url('~@/assets/icon-close.png') no-repeat;
+    width: 12px;
+    height: 12px;
+    background-size: 100% 100%;
+    &.expanded{
+      transform: none !important;
+      background: url('~@/assets/icon-open.png') no-repeat;
+      width: 12px;
+      height: 12px;
+      background-size: 100% 100%;
+    }
+  }
+  & > .el-tree-node{
+    & > .el-tree-node__content{
+      .el-tree-node__label{
+        font-size: 14px;
+        font-weight: 400;
+        color: #2a2929;
+      }
+      .el-tree-node__expand-icon{
+        width: 14px;
+        height: 13px;
+        &.is-leaf{
+          width: 14px;
+          height: 13px;
+          background: url('~@/assets/icon-tree-leaf.png') no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .el-tree-node__expand-icon:not(.is-leaf){
+        // margin-right: 8px;
+        background: url('~@/assets/icon-tree-close.png') no-repeat;
+        width: 14px;
+        height: 13px;
+        background-size: 100% 100%;
+        &.expanded{
+          transform: none !important;
+          background: url('~@/assets/icon-tree-open.png') no-repeat;
+          width: 14px;
+          height: 13px;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+  & > .el-tree-node > .el-tree-node__children{
+    & > .el-tree-node{
+      & >.el-tree-node__children{
+        & >.el-tree-node__content{
+          // 将里面的第一个span设置为display:none，这样就可以去掉原来的三角形了
+          &:first-child{
+            .el-tree-node__expand-icon{
+              display: none;
+            }
+          }
+        }
+      }
+      & > .el-tree-node__content{
+        .el-tree-node__label{
+          font-size: 14px;
+          font-weight: 400;
+          color: #818693;
+        }
+        .el-tree-node__expand-icon{
+          width: 14px;
+          height: 14px;
+          
+        }
+        .el-tree-node__expand-icon:not(.is-leaf){
+          width: 14px;
+          height: 14px;
+          &.expanded{
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
+}

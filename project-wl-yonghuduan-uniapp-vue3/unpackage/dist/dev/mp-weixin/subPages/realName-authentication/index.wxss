@@ -1,0 +1,82 @@
+/* 水平间距 */
+/* 水平间距 */
+.realName-authentication .tips.data-v-71333222 {
+  height: 60rpx;
+  width: 100%;
+  background: #FAF4DE;
+  color: #EA8A57;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+}
+.realName-authentication .tips.data-v-71333222::before {
+  content: "";
+  display: block;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #E88649;
+  margin: 0 20rpx;
+}
+.realName-authentication .content.data-v-71333222 {
+  height: 136rpx;
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: #919191;
+  margin: 21rpx;
+  padding: 40rpx 36rpx;
+}
+.realName-authentication .form.data-v-71333222 {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  border-radius: 20rpx;
+  padding: 0 24rpx;
+  margin: 0 21rpx;
+}
+.realName-authentication .form .name-item.data-v-71333222, .realName-authentication .form .identify-item.data-v-71333222 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 104rpx;
+}
+.realName-authentication .form .name-item .label.data-v-71333222, .realName-authentication .form .identify-item .label.data-v-71333222 {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.realName-authentication .form .name-item .input-box.data-v-71333222, .realName-authentication .form .identify-item .input-box.data-v-71333222 {
+  display: flex;
+}
+.realName-authentication .form .name-item .input-box .uni-input.data-v-71333222, .realName-authentication .form .identify-item .input-box .uni-input.data-v-71333222 {
+  text-align: right;
+}
+.realName-authentication .form .name-item .input-box .uni-icon.data-v-71333222, .realName-authentication .form .identify-item .input-box .uni-icon.data-v-71333222 {
+  width: 48rpx;
+  height: 48rpx;
+}
+.realName-authentication .form .name-item.data-v-71333222 {
+  border-bottom: 2rpx solid #F4F4F4;
+}
+.realName-authentication .footer.data-v-71333222 {
+  position: fixed;
+  width: 100%;
+  height: 164rpx;
+  background: #FFFFFF;
+  bottom: 0;
+}
+.realName-authentication .footer .btn.data-v-71333222 {
+  width: 400rpx;
+  height: 88rpx;
+  background: #CCCCCC;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: white;
+  font-size: 30rpx;
+  margin: 17rpx auto;
+}
+.realName-authentication .footer .btn.active.data-v-71333222 {
+  background-color: #E84134;
+  color: white;
+}

@@ -1,0 +1,15 @@
+application:
+  version: v1.0
+spring:
+  main:
+    #common中引入了springboot-web，由于Gateway采用webflux实现，需要需要设置应用类型为：reactive
+    web-application-type: reactive
+  application:
+    name: sl-express-gateway
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      #解决异常：swagger Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+      #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      matching-strategy: ant_path_matcher

@@ -1,0 +1,13 @@
+.navBox{
+	.input-view{
+		position: relative;
+		icon{
+			width: 20rpx;
+			height: 20rpx;
+			position: absolute;
+			right: 220rpx;
+			top: 15rpx;
+			z-index: 9;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sl-express</groupId>
+        <artifactId>sl-express-parent</artifactId>
+        <version>1.4</version>
+    </parent>
+
+    <groupId>com.sl-express.ms.trade</groupId>
+    <artifactId>sl-express-ms-trade-api</artifactId>
+    <version>1.1-SNAPSHOT</version>
+    <description>交易（支付）微服务 - Feign接口</description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <sl-express-trade-domain.version>1.1-SNAPSHOT</sl-express-trade-domain.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sl-express.ms.trade</groupId>
+            <artifactId>sl-express-ms-trade-domain</artifactId>
+            <version>${sl-express-trade-domain.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

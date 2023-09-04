@@ -1,0 +1,109 @@
+.weightAndVolume{
+	background-color: white;
+	margin-top: 20rpx;
+	padding:56rpx 40rpx ;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 200rpx;
+	.volume-box{
+		margin-top: 50rpx;
+		.isVolumeInfo{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.isVolumeInfo-title{
+				font-size: 24rpx;
+				color: #888888;
+				margin-right: 18rpx;
+			}
+			::v-deep .uni-switch-input::before{
+				background-color: #CCCCCC;
+				width: 120rpx;
+			}
+			::v-deep .uni-switch-input.uni-switch-input-checked:after{
+				transform: translateX(60rpx);
+			}
+			::v-deep .uni-switch-input{
+				width: 120rpx;
+			}
+			switch{
+				position: relative;
+				left: 20rpx;
+			}
+		}
+	}
+	.weight-box,.volume-box,.isVolumeInfo-title-box{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		.unit{
+			position: absolute;
+			right: 126rpx;
+			top:16rpx ;
+		}
+		.weight-box-title,.volume-box-title{
+			font-weight: bold;
+			font-size: 32rpx;
+			color: #0F0F0F;
+		}
+		.uni-numbox{
+			height: 76rpx;
+			.uni-numbox__value{
+				height: 76rpx!important;
+				margin: 0;
+				background-color: #F9F9F9!important;
+				width: 220rpx;
+			}
+			.uni-numbox__plus,.uni-numbox__minus{
+				width: 76rpx;
+				border-radius: 0rpx 36rpx 36rpx 0;
+				background-color: #ECECEC!important;
+				.uni-numbox--text{
+					span{
+						font-weight: bold;
+					}
+				}
+			}
+			.uni-numbox__minus{
+				border-radius: 36rpx 0rpx 0rpx 36rpx;
+			}
+		}
+	}
+	.isVolumeInfo-title-box{
+		justify-content: flex-end;
+		margin-top: 10rpx;
+		.unit{
+			
+		}
+	}
+	.long-width-height{
+		display: flex;
+		align-items: center;
+		margin-top: 16rpx;
+		.cheng{
+			margin: 0 12rpx;
+			height: 19rpx;
+			line-height: 30rpx;
+		}
+		.long,.width,.height{
+			::v-deep .uni-input-wrapper,.uni-input{
+				background-color: #F4F4F4;
+				border-radius: 36rpx;
+				width: 198rpx;
+				height: 74rpx;
+				text-align: center;
+			}
+		}
+	}
+	.accounting-rules{
+		font-size: 24rpx;
+		color: #888888;
+		margin-top: 40rpx;
+		.red{
+			color: #E84134;
+			font-size: 24rpx;
+			text-decoration: underline;
+		}
+	}
+}

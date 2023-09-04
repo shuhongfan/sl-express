@@ -1,0 +1,160 @@
+@import url('./theme.scss');
+body,
+uni-page-body,
+uni-page-head,
+.uni-page-head {
+	background-color: var(--neutral-color-background) !important;
+}
+
+::v-deep .expressage {
+	position: relative;
+	.uni-data-checklist .checklist-group .checklist-box {
+		margin-right: 0;
+		.checkbox__inner {
+			background: url(@/static/checkbox.png) no-repeat !important;
+			background-size: contain !important;
+			border: 0 none !important;
+		}
+		&.is--default.is-checked .checkbox__inner {
+			background: url(@/static/checkboxActive.png) no-repeat !important;
+			background-size: contain !important;
+			.checkbox__inner-icon {
+				opacity: 0;
+			}
+		}
+	}
+	.checkbox {
+		position: absolute;
+		left: 58rpx;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+.cancelList{
+	color:var(--neutral-color-font);
+	.concelBtn{
+		font-weight: 400;
+	}
+}	
+	
+}
+
+.filtrateBox {
+	display: flex;
+	padding: 20rpx 34rpx;
+	border-top: 1px solid var(--neutral-color-background);
+	background: var(--neutral-color-white);
+	::v-deep .item {
+		flex: 1;
+		background: var(--neutral-color-background);
+		height: 60rpx;
+		line-height: 60rpx;
+		border-radius: 8rpx;
+		text-align: center;
+		color: var(--neutral-color-font);
+		position: relative;
+		padding-right: 46rpx;
+		&:nth-child(2) {
+			margin: 0 44rpx;
+		}
+		&:last-child {
+			padding: 0 23rpx;
+		}
+		&.onHover {
+			color: var(--essential-color-red);
+		}
+		icon {
+			width: 20rpx;
+			height: 12rpx;
+			position: absolute;
+			right: 26rpx;
+		}
+		.up {
+			background: url(@/static/up.png) no-repeat;
+			background-size: contain;
+			top: 18rpx;
+			&.hover {
+				background: url(@/static/uphover.png) no-repeat;
+				background-size: contain;
+			}
+		}
+		.down {
+			background: url(@/static/down.png) no-repeat;
+			background-size: contain;
+			bottom: 18rpx;
+			&.hover {
+				background: url(@/static/downhover.png) no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+::v-deep .adminActive {
+	margin-left: 108rpx !important;
+	margin-right: -16rpx !important;
+	
+}
+::v-deep .turnBox{
+	margin-top: 24rpx;
+	padding:32rpx 28rpx;
+	.boxBg{
+		margin: 0 0 32rpx;
+		box-shadow: none;
+	}
+}
+.concelBox{
+	// margin-bottom: 32rpx;
+	.tabConList{
+		.item{
+			display: flex;
+			padding-left: 60rpx;
+			padding-right: 50rpx;
+			color: var(--neutral-color-main);
+			&>view{
+				display: block;
+				flex: 1;
+			}
+			.cause{
+				text-align: right;
+				align-items: center;
+				.nextIcon{
+					margin-left: 20rpx;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+.conCenter{
+	text-align: center;
+}
+::v-deep .pickupBoxTop{
+	margin-top: 420rpx;
+	.empty .image{
+		margin-top:520rpx ;
+	}
+}
+::v-deep .pickupTop{
+	margin-top: 316rpx;
+	.empty .image{
+		margin-top:416rpx ;
+	}
+}
+::v-deep .pickupTab{
+	position: fixed;
+	top: 208rpx;
+	z-index: 1;
+	width: 100% !important;
+	.uni-scroll-view-content .scroll-row-item{
+		margin-right: 80rpx;
+	}
+}
+::v-deep .pickupFilrate{
+	position: fixed;
+	z-index: 1;
+	top: 320rpx;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+

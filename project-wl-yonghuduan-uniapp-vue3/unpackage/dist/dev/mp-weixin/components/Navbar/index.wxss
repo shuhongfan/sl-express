@@ -1,0 +1,20 @@
+/* 水平间距 */
+/* 水平间距 */
+.NavBar.data-v-6e7b2b6e {
+  position: relative;
+  background-color: white;
+}
+.NavBar .title.data-v-6e7b2b6e {
+  font-weight: bold;
+  font-size: 32rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NavBar .navbar-image.data-v-6e7b2b6e {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 26rpx;
+}

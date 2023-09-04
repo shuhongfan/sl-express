@@ -1,0 +1,18 @@
+[
+  {
+    "agencyType": 1,
+    "agencyTypeName": "分公司"
+  },
+  {
+    "agencyType": 2,
+    "agencyTypeName": "一级转运中心"
+  },
+  {
+    "agencyType": 3,
+    "agencyTypeName": "二级转运中心"
+  },
+  {
+    "agencyType": 4,
+    "gencyTypeName": "网点"
+  }
+]

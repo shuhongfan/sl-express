@@ -1,0 +1,84 @@
+
+.loginBox {
+	background-color: white;
+	height: 100vh;
+	::v-deep .uni-popup__wrapper {
+		height:500rpx;
+		background-color: white !important;
+		border-radius: 24rpx 24rpx 0 0;
+		padding: 65rpx 39rpx 180rpx;
+	}
+	.logo-box{
+		text-align: center;
+		margin-top: 204rpx;
+		image{
+			width: 166rpx;
+			height: 174rpx;
+		}
+		.title{
+			font-size: 32rpx;
+			color:#20232A ;
+			font-weight: bold;
+
+		}
+	}
+	.open-dialog{
+		height: 88rpx;
+		background: #E63E32;
+		border-radius: 44rpx;
+		color: white;
+		text-align: center;
+		line-height: 88rpx;
+		margin: 228rpx 46rpx 0;
+	}
+
+	uni-popup{
+		.header{
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			border-radius: 24rpx 24rpx 0 0;
+			image{
+				height: 35rpx;
+				width:35rpx ;
+			}
+			.title{
+				font-weight: bold;
+				font-size: 30rpx;
+				margin: 0 auto;
+			}
+		}
+		.content{
+			font-size: 28rpx;
+			margin-top: 35rpx;
+			.tips{
+				margin-top: 50rpx;
+			}
+			text{
+				font-weight: bold;
+			}
+		}
+		.footer{
+			display: flex;
+			margin-top: 90rpx;
+			.btn{
+				width: 276rpx;
+				height: 88rpx;
+				line-height: 88rpx;
+				border: 2rpx solid #E84134;
+				border-radius: 44rpx;
+				font-size: 30rpx;
+			}
+			.cancel-btn{
+				background: #FFFFFF;
+				color: #E84134;
+			}
+			.agree-btn{
+				background: #E84134;
+				color: white;
+			}
+		}
+	}
+	
+}
+	

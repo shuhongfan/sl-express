@@ -1,0 +1,1 @@
+<view class="net-fail data-v-33ea5bd3"><image src="/static/net-fail.png" class="net-fail-image data-v-33ea5bd3"/><view class="tips data-v-33ea5bd3">请检查网络</view><view class="btn data-v-33ea5bd3" bindtap="{{a}}">重新加载</view></view>

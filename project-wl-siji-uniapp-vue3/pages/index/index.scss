@@ -1,0 +1,257 @@
+.container{
+	border-radius: 20rpx;
+	.swiperH{
+		height: calc(100vh - 270rpx);
+		padding-bottom: 30rpx;
+		box-sizing: border-box;
+	}
+	.finshSwiperH{
+		height: calc(100vh - 460rpx);
+	}
+	.cont{
+		padding:0 30rpx;
+	}
+}
+// 首页 - 通用 - 左右结构
+.carInfo{
+	.line{
+		.tit{
+			display: inline-block;
+			min-width: 120rpx;
+		}
+		display: flex;
+		justify-content: space-between;
+		color: var(--neutral-color-font);
+		font-size: var(--font-size-14);
+		line-height: 60rpx;
+		.ritEl{
+			color: var(--neutral-color-main);
+		}
+	}
+}
+// 详情-基本信息
+.baseInfo{
+	.addrCont{
+		font-weight: 400;
+		font-size: 28rpx;
+		color: var(--neutral-color-font);
+		letter-spacing: 0.32rpx;
+		padding-bottom: 40rpx;
+		margin-bottom: 20rpx;
+		border-bottom:  1px solid var(--neutral-color-segmentation);
+		position: relative;
+		&:before{
+			position: absolute;
+			left: 18rpx;
+			color:var(--neutral-color-white);
+			text-align: center;
+			content: '';
+			display: inline-block;
+			width: 0px;
+			height: 56%;
+			border-left: dashed 2px var(--neutral-color-border);
+			border-radius: 11px;
+		}
+		.startAddr{
+			padding-left: 66rpx;
+			position: relative;
+			margin-bottom: 20rpx;
+			line-height: 44rpx;
+			&:before{
+				position: absolute;
+				font-size: 22rpx;
+				left: 0;
+				color:var(--neutral-color-white);
+				text-align: center;
+				content: '起';
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+				background: var(--neutral-color-main);
+				border-radius: 11px;
+			}
+		}
+		.endAddr{
+			padding-left: 66rpx;
+			position: relative;
+			line-height: 44rpx;
+			&:before{
+				font-size: 22rpx;
+				position: absolute;
+				left: 0;
+				color: var(--neutral-color-white);
+				text-align: center;
+				content: '止';
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+				background: var(--essential-color-red);
+				border-radius: 11px;
+			}
+		}
+	}
+}
+// 详情-运算路线
+.routeItem{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.navigat{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0rpx 0rpx 0rpx 40rpx;
+		border-left: 2rpx solid #EEEEEE;
+		margin-left: 20rpx;
+		font-size: var(--font-size-12);
+		.naviIcon{
+			width: 64rpx;
+			height: 64rpx;
+		}
+		
+	}
+	.routeLine{
+		display: flex;
+		justify-content: space-between;
+		padding:0 20rpx;
+		flex:1;
+		.route{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-weight: 400;
+			font-size: var(--font-size-12);
+			color: var(--neutral-color-main);
+			flex: 1;
+			.line{
+				width: 80%;
+				.LineImg{
+					width: 72rpx;
+					height: 32rpx;
+				}
+			}
+		}
+		.routePoint{
+			text-align: center;
+			font-weight: 400;
+			font-size: var(--font-size-14);
+			color: var(--neutral-color-main);
+			line-height: 60rpx;
+			.tit{
+				font-weight: 600;
+				font-size: var(--font-size-16);
+				color: var(--neutral-color-main);
+			}
+		}
+	}
+}
+// 详情-物品信息
+.orderCont{
+	.search{
+		margin-bottom: 20rpx;
+		position: relative;
+		.searchIcon{
+			position: absolute;
+			left: 20rpx;
+			top: 18rpx;
+		}
+		.searchInput{
+			background-color: var(--neutral-color-cancel);
+			border-radius: 32rpx;
+			font-size: var(--font-size-12);
+			line-height: 64rpx;
+			height: 64rpx;
+			padding: 0 20rpx 0 60rpx;
+		}
+	}
+	.items{
+		.item{
+			display: flex;
+			justify-content: space-between;
+			font-size: 28rpx;
+			line-height: 60rpx;
+			color: var(--neutral-color-main);
+			.odd{
+				flex: 1;
+			}
+			.piece, .weight{
+				text-align: right;
+				width: 200rpx;
+			}
+		}
+	}
+}
+// 详情-异常信息
+.delay{
+	display: flex;
+	font-size: var(--font-size-14);
+	align-items: center;
+	border-bottom: solid 2rpx var(--neutral-color-background);
+	padding: 20rpx 0;
+	.info{
+		flex: 1;
+		color: var(--neutral-color-main);
+		
+		.line{
+			line-height: 60rpx;
+			.desc{
+				padding-left: 40rpx;
+				color: var(--neutral-color-font);
+			}
+		}
+	}
+	.goInfoIcon{
+		width: 48rpx;
+		height: 48rpx;
+	}
+}
+
+// 图片上传
+.upPicCont{
+	margin-bottom: 32rpx;
+	.title{
+		font-weight: 400;
+		font-size: var(--font-size-14);
+		color: var(--neutral-color-font);
+		margin-bottom: 32rpx;
+	}
+	.file-picker__box-content{
+		border:none;
+		background: var(--neutral-color-cancel);
+	}
+	// 已完成的详情图片回显
+	.tit{
+		font-size: 28rpx;
+		margin-bottom: 20rpx;
+	}
+	.upPicContImg{
+		display: flex;
+		.image{
+			width: 180rpx;
+			height: 180rpx;
+			margin:0 30rpx 30rpx 0;
+		}
+		.image:nth-child(3){
+			margin-right: 0;
+		}
+	}
+	
+}
+
+// 详情 - 底部的两按钮
+.footCont{
+	display: flex;
+	background-color: var(--neutral-color-white);
+	padding: 20rpx 30rpx;
+	box-sizing: border-box;
+	.footButCan{
+		flex: 125;
+		margin-right: 30rpx;
+	}
+	.footBut{
+		flex: 200;
+	}
+}

@@ -1,0 +1,63 @@
+/* 水平间距 */
+/* 水平间距 */
+.order-cancel.data-v-1c6dafee {
+  background-color: #F3F5F9;
+}
+.order-cancel .orderCancel-bg.data-v-1c6dafee {
+  width: 100%;
+  height: 236rpx;
+}
+.order-cancel .cancel.data-v-1c6dafee {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  margin: 0 20rpx;
+  padding: 29rpx;
+}
+.order-cancel .cancel .customerBox.data-v-1c6dafee, .order-cancel .cancel .senderBox.data-v-1c6dafee {
+  border-bottom: 2rpx solid #F5F5F5;
+  padding-bottom: 46rpx;
+}
+.order-cancel .cancel .customerBox .title.data-v-1c6dafee, .order-cancel .cancel .senderBox .title.data-v-1c6dafee {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.order-cancel .cancel .customerBox .reason-item.data-v-1c6dafee, .order-cancel .cancel .senderBox .reason-item.data-v-1c6dafee {
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+  font-size: 28rpx;
+}
+.order-cancel .cancel .customerBox .reason-item .label.data-v-1c6dafee, .order-cancel .cancel .senderBox .reason-item .label.data-v-1c6dafee {
+  margin-left: 9rpx;
+}
+.order-cancel .cancel .senderBox.data-v-1c6dafee {
+  margin-top: 28rpx;
+  border-bottom: none;
+}
+.order-cancel .footer.data-v-1c6dafee {
+  height: 164rpx;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+}
+.order-cancel .footer .cancel-btn.data-v-1c6dafee, .order-cancel .footer .confirm-btn.data-v-1c6dafee {
+  width: 276rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 88rpx;
+  margin-top: 17rpx;
+}
+.order-cancel .footer .cancel-btn.data-v-1c6dafee {
+  border: 2rpx solid #191919;
+  margin-right: 20rpx;
+}
+.order-cancel .footer .confirm-btn.data-v-1c6dafee {
+  background: #E84134;
+  color: white;
+  margin-left: 20rpx;
+}

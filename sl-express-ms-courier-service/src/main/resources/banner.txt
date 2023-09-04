@@ -1,0 +1,7 @@
+
+       _                                                     ${spring.application.name} ${application.version}
+  ___ | |         ___ __  __ _ __   _ __  ___  ___  ___      Port: ${server.port}
+ / __|| | _____  / _ \\ \/ /| '_ \ | '__|/ _ \/ __|/ __|     Pid: ${pid}  Profile(s): ${AnsiColor.GREEN}${spring.profiles.active}${AnsiColor.DEFAULT}
+ \__ \| ||_____||  __/ >  < | |_) || |  |  __/\__ \\__ \
+ |___/|_|        \___|/_/\_\| .__/ |_|   \___||___/|___/     https://sl-express.itheima.net/
+                            |_|

@@ -1,0 +1,67 @@
+@import url(@/styles/theme.scss);
+.userContainer {
+	.topbackground{
+		position: relative;
+		overflow: hidden;
+		height: 42vh;
+		&::before{
+			content: "";
+			position: absolute;
+			left: -50%;
+			z-index: 1;
+			width: 200vw;
+			border-radius: 100%;
+			bottom: 0;
+			height: 80vh;
+			background-color: var(--essential-color-red);
+		}
+	}
+	.container{
+		padding: 30rpx;
+	}
+	.myInfo{
+		width: 80%;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		bottom: 200rpx;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		color: var(--neutral-color-white);
+		font-size: var(--font-size-14);
+		line-height: 60rpx;
+		.title{
+			font-weight: 600;
+			font-size: var(--font-size-18);
+			line-height: 80rpx;
+		}
+		.userIcon{
+			width: 130rpx;
+			height: 130rpx;
+		}
+	}
+	.navList{
+		position: relative;
+		top: -150rpx;
+		background: var(--neutral-color-white);
+		border-radius: 16rpx;
+		padding: 0rpx 48rpx;
+		.line{
+			line-height: 116rpx;
+			border-bottom: solid 2rpx var(--neutral-color-cancel);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.icon{
+				width: 48rpx;
+				height: 48rpx;
+			}
+		}
+		.line:last-child{
+			border: none;
+		}
+	}
+}

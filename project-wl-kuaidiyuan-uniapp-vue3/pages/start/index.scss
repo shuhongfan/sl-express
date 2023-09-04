@@ -1,0 +1,42 @@
+.starPage{
+	.page{
+		background: #fff url(@/static/goink.jpg) no-repeat 50% 50%;
+		background-size:contain;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.tit{
+		width: 38rpx;
+		line-height: 40rpx;
+		font-size: 36rpx;
+		margin: 0 auto;
+		letter-spacing: 0.42rpx;
+		text-align: center;
+		text{
+			display: block;
+			padding:0 0 10rpx 0;
+		}
+	}
+	.map{
+		background: url(@/static/star.png) no-repeat;
+		background-size: contain;
+		width: 320rpx;
+		height: 232rpx;
+		margin-top: 80rpx;
+		margin-bottom: 142rpx;
+	}
+	.logo{
+		background: url(@/static/logo.png) no-repeat;
+		background-size: contain;
+		width: 712rpx;
+		height: 184rpx;
+		left: 50%;
+		transform: translate(-50%, 0);
+		position: absolute;
+		bottom: 5%;
+		
+	}
+}

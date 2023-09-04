@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sl.ms.work.mapper.TransportTaskMapper">
+
+    <select id="findStatusCount" resultType="com.sl.ms.work.domain.dto.response.TransportTaskStatusCountDTO">
+        SELECT `status` AS statusCode,
+               count(1) AS count
+        FROM
+            sl_transport_task
+        GROUP BY
+            `status`
+    </select>
+
+    <select id="monthlyDistanceStatistics"
+            resultType="com.sl.ms.work.domain.dto.response.TransportTaskMonthlyDistanceDTO">
+        SELECT DATE_FORMAT(actual_arrival_time, '%Y-%m-%d') AS dateTime, sum(distance) AS mileage
+        FROM sl_transport_task
+        <where>
+            <if test="transportTaskIds!=null">
+                and id IN
+                <foreach collection="transportTaskIds" separator="," item="item" open="(" close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="startTime !=null">
+                and actual_arrival_time &gt;= #{startTime}
+            </if>
+            <if test="endTime !=null">
+                and actual_arrival_time &lt; #{endTime}
+            </if>
+        </where>
+        GROUP BY dateTime
+    </select>
+
+</mapper>

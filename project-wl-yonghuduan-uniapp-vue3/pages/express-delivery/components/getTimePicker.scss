@@ -1,0 +1,77 @@
+.getTimePicker {
+		::v-deep .uni-popup__wrapper {
+			height: 680rpx;
+			background-color: white !important;
+			border-radius: 24rpx 24rpx 0 0;
+		}
+
+		.header {
+			display: flex;
+			height: 56rpx;
+			padding: 30rpx 38rpx;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 24rpx 24rpx 0 0;
+
+			.header-title {
+				font-size: 32rpx;
+				color: #151515;
+				font-weight: bold;
+			}
+
+			.close {
+				width: 24rpx;
+				height: 24rpx;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../../../static/icon21.png');
+			}
+		}
+		.time-select{
+			display: flex;
+			.select-day{
+				width: 296rpx;
+				height: 500rpx;
+				background: #F6F6F6;
+				.select-day-item{
+					height: 108rpx;
+					line-height: 108rpx;
+					text-align: center;
+					font-size: 28rpx;
+				}
+				.select-day-item.active{
+					background: #fff;
+					color:#E84134 ;
+				}
+			}
+			.select-time{
+				.time-item{
+					font-size: 28rpx;
+					display: flex;
+					padding-left: 80rpx;
+					margin-bottom: 46rpx;
+					.time-value{
+						padding-right: 126rpx;
+					}
+					.time-select{
+						width: 40rpx;
+						height: 40rpx;
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-image: url('../../../static/gouxuan.png');
+					}
+				}
+				.time-item.active{
+					color:#E84134 ;
+				}
+				::v-deep scroll-view{
+					height:500rpx ;
+				}
+				
+				//隐藏滚动条
+				::v-deep ::-webkit-scrollbar {
+					display: none;
+				}
+			}
+		}
+	}

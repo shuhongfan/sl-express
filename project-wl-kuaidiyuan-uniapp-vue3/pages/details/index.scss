@@ -1,0 +1,667 @@
+body,
+uni-page-body,
+uni-page-head,
+.uni-page-head {
+	background-color: var(--neutral-color-background) !important;
+}
+.detailBox {
+	padding-bottom: 186rpx;
+	.boxBg {
+		margin-top: 32rpx;
+		padding: 28rpx 26rpx;
+		
+	}
+	::v-deep .tit {
+		display: flex;
+		align-items: center;
+		& > text {
+			flex: 1;
+			color: var(--neutral-color-font);
+			span {
+				display: flex;
+				align-items: center;
+			}
+		}
+		.copy {
+			background: url(@/static/icon20.png) no-repeat;
+			background-size: contain;
+			width: 24rpx;
+			height: 30rpx;
+			margin-left: 14rpx;
+		}
+		.goodsSelect {
+			text-align: right;
+			display: flex;
+			align-items: center;
+		}
+		.iconTip {
+			background: var(--essential-color-red);
+			width: 12rpx;
+			height: 12rpx;
+			border-radius: 50%;
+			vertical-align: middle;
+		}
+		.textInfo {
+			color: var(--neutral-color-main);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: inline-block;
+			width: 400rpx;
+			// padding-right: 20rpx;
+			vertical-align: middle;
+			text-align: right;
+		}
+	}
+	.freight {
+		display: flex;
+		border-top: 1px solid var(--neutral-color-background);
+		padding: 36rpx 0 12rpx;
+		margin-top: 16rpx;
+		view {
+			&:first-child {
+				flex: 1;
+				text {
+					font-size: var(--font-size-12);
+					color: var(--neutral-color-font);
+					padding-left: 10rpx;
+					text {
+						color: var(--essential-color-red);
+					}
+				}
+			}
+			&:last-child {
+				text-align: right;
+				display: flex;
+				align-items: center;
+			}
+			::v-deep uni-input {
+				width: 120rpx;
+				font-size: var(--font-size-14);
+				color: var(--neutral-color-main);
+				height: 30rpx;
+				line-height: 30rpx;
+				min-height: 30rpx;
+			}
+		}
+	}
+	.btnBox {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 10rpx;
+		.btn-default {
+			box-shadow: 0 7px 12px 0 rgba(239, 79, 63, 0.41);
+		}
+	}
+	::v-deep .identityBox {
+		padding: 8rpx 0 0;
+		margin-top: 28rpx;
+		border-top: 1px solid var(--neutral-color-background);
+		display: flex;
+		align-items: center;
+		& > view {
+			&:first-child {
+				flex: 1;
+				display: flex;
+				align-items: center;
+			}
+		}
+		.concelBtn {
+			line-height: 60rpx;
+			height: 60rpx;
+			border-radius: 30rpx;
+			margin-top: 40rpx !important;
+		}
+		.uni-forms {
+			flex: 1;
+			.is-input-border {
+				border: 0 none !important;
+			}
+			.uni-easyinput__content-input {
+				padding: 0 !important;
+			}
+			.uni-easyinput__placeholder-class {
+				font-size: var(--font-size-14);
+			}
+			.uni-forms-item__inner {
+				padding: 0;
+			}
+		}
+		.text {
+			padding-top: 10rpx;
+		}
+	}
+	::v-deep .identitySuccee {
+		padding: 20rpx 0;
+		line-height: 60rpx;
+	}
+	:deep(.pickupBox){
+			padding-bottom: 0;
+			.addressCon{
+				.item{
+					padding: 10rpx 0 !important;
+				}
+			}
+	}
+}
+::v-deep .addressCon {
+	.item {
+		display: flex;
+		padding: 16rpx 0;
+		.name {
+			padding-right: 20rpx;
+		}
+	}
+}
+
+::v-deep .goodsCon {
+	.item {
+		&:first-child {
+			padding-top: 12rpx;
+		}
+	}
+}
+// 弹层
+::v-deep .detailPopup {
+	.uni-popup__wrapper {
+		background: var(--neutral-color-white) !important;
+		border-radius: 32rpx 32rpx 0 0 !important;
+		.btn-default {
+			height: 90rpx;
+			line-height: 90rpx;
+		}
+		.tit {
+			height: 120rpx;
+			line-height: 120rpx;
+			display: flex;
+			padding: 0 44rpx;
+			align-items: center;
+			border-bottom: 1px solid var(--neutral-color-background);
+			text {
+				flex: 1;
+			}
+			icon {
+				text-align: right;
+				background: url(@/static/icon21.png) no-repeat;
+				background-size: contain;
+				width: 26rpx;
+				height: 26rpx;
+				text-align: right;
+			}
+		}
+		.typeItem {
+			border-bottom: 1px solid var(--neutral-color-background);
+			display: flex;
+			padding: 0 44rpx;
+			align-items: center;
+			height: 116rpx;
+			line-height: 116rpx;
+			text {
+				flex: 1;
+			}
+		}
+		.goodBox {
+			padding: 0 32rpx 0 4rpx;
+			display: flex;
+			flex-flow: row wrap;
+			align-content: flex-start;
+			.item {
+				box-sizing: border-box;
+
+				flex: 0 0 29.3%;
+				margin-top: 40rpx;
+				height: 80rpx;
+				line-height: 80rpx;
+				text-align: center;
+				background: var(--neutral-color-background);
+				border-radius: 20rpx;
+				margin-left: 28rpx;
+			}
+			.active {
+				border: 1px solid #ef4f3f;
+				height: 76rpx;
+				line-height: 76rpx;
+				background: var(--neutral-color-white);
+			}
+		}
+	}
+	.other {
+		height: 40rpx;
+		line-height: 40rpx;
+		padding: 28rpx 30rpx;
+		margin: 40rpx 30rpx 0;
+		background: var(--neutral-color-background);
+		border-radius: 10px;
+		position: relative;
+		.uni-textarea-textarea {
+			height: 40rpx;
+		}
+		.numText {
+			position: absolute;
+			top: 28rpx;
+			right: 24rpx;
+			color: var(--neutral-color-font);
+			.tip {
+				color: #bdbdbd;
+			}
+		}
+	}
+	.remark {
+		// height: 40rpx;
+		line-height: 40rpx;
+		padding: 28rpx 30rpx;
+		margin: 40rpx 30rpx 0;
+		background: var(--neutral-color-background);
+		border-radius: 10px;
+		position: relative;
+		// .uni-textarea-textarea{
+		// 	height: 40rpx;
+		// }
+		.numText {
+			position: absolute;
+			bottom: 28rpx;
+			right: 24rpx;
+			color: var(--neutral-color-font);
+			.tip {
+				color: #bdbdbd;
+			}
+		}
+	}
+}
+// 运单详情
+.wayCon {
+	.item {
+		display: flex;
+		align-items: center;
+		line-height: 80rpx;
+		height: 80rpx;
+		color: var(--neutral-color-font);
+		text {
+			flex: 1;
+			text-align: right;
+			color: var(--neutral-color-main);
+		}
+	}
+}
+.remark {
+	border-top: 1px solid var(--neutral-color-background);
+	border-bottom: 1px solid var(--neutral-color-background);
+	padding: 30rpx 0;
+	margin: 20rpx 0;
+	.item {
+		text-align: left;
+		display: inherit;
+		height: auto;
+		line-height: 40rpx;
+		&:last-child {
+			padding: 20rpx 0 0;
+		}
+	}
+}
+::v-deep .content {
+	uni-cover-view {
+		overflow: initial;
+	}
+}
+.scroll-Y {
+	height: 300rpx;
+}
+.bottmBox {
+	background: var(--neutral-color-white);
+	border-radius: 10px;
+	position: fixed;
+	top: 190rpx;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	padding-top: 40rpx;
+	.orderList {
+		padding: 0 32rpx 40rpx;
+		margin: 0 30rpx;
+		height: calc(82vh - 20rpx);
+		// height: 400px;
+		overflow-y: scroll;
+		.fontPostion {
+			position: absolute;
+			top: 8rpx;
+		}
+		& > .uni-cover-view {
+			
+			uni-cover-view {
+				// &:nth-child(1) {
+				// 	.logistics-orderInfo-right {
+				// 		margin-left: 12rpx;
+				// 	}
+				// }
+				// &:nth-child(2) {
+				// 	.logistics-orderInfo-right {
+				// 		margin-left: 10rpx;
+				// 	}
+				// }
+			}
+			
+		}
+		.item {
+			position: relative;
+			padding-bottom: 60rpx;
+			border-left: 1px dotted #ccc;
+			&:last-child {
+				border: 0 none;
+				padding: 0;
+			}
+			.iconBg {
+				width: 52rpx;
+				height: 52rpx;
+				background: var(--neutral-color-font);
+				line-height: 52rpx;
+				color: var(--neutral-color-white);
+				text-align: center;
+				padding: 10rpx 0 0 0rpx;
+				box-sizing: border-box;
+				border-radius: 50%;
+				position: absolute;
+				left: -26rpx;
+				icon {
+					width: 30rpx;
+					height: 32rpx;
+				}
+
+				&.harvest {
+					background: var(--essential-color-red);
+				}
+				.pickUp {
+					background: url(@/static/icon24.png) no-repeat;
+					background-size: contain;
+				}
+				.transport {
+					background: url(@/static/icon25.png) no-repeat;
+					background-size: contain;
+					width: 37rpx;
+					height: 28rpx;
+				}
+			}
+			.rtext {
+				padding-left: 48rpx;
+				line-height: 34rpx;
+				font-size: var(--font-size-12);
+				.tit {
+					font-weight: 600;
+					font-size: var(--font-size-16);
+					line-height: 44rpx;
+				}
+				.time {
+					color: var(--neutral-color-font);
+					padding: 2rpx 0 6rpx;
+				}
+			}
+		}
+	}
+}
+// ::v-deep .logistics-orderInfo {
+// 	&.logistics-orderInfo-item.active {
+// 		.logistics-orderInfo-left {
+// 			.iconBg {
+// 				background-color: #e63e32 !important;
+// 			}
+// 		}
+// 	}
+// 	&.logistics-orderInfo-item {
+// 		& > .uni-cover-view {
+// 			// display: flex;
+// 			// padding-bottom: 60rpx;
+// 		}
+
+// 		.logistics-orderInfo-left {
+// 			float: left;
+// 			// text-align: center;
+// 			// .gray.circle {
+// 			// 	background-color: #818181;
+// 			// }
+// 			.logistics-orderInfo-item.active {
+// 				.logistics-orderInfo-left {
+// 					.circle {
+// 						background-color: #e63e32 !important;
+// 					}
+// 				}
+// 			}
+// 			.circle {
+// 				position: relative;
+// 				// background-color: #818181;
+// 				right: 20rpx;
+// 				width: 52rpx;
+// 				height: 52rpx;
+// 				line-height: 52rpx;
+// 				font-size: 24rpx;
+// 				display: flex;
+// 				align-items: center;
+// 				justify-content: center;
+// 				color: #818181;
+// 				image {
+// 					width: 40rpx;
+// 					height: 40rpx;
+// 				}
+// 				.uni-cover-view {
+// 					width: 52rpx;
+// 					// height: 52rpx;
+// 					// line-height: 52rpx;
+// 					display: flex;
+// 					align-items: center;
+// 					justify-content: center;
+// 					text-align: center;
+// 				}
+// 			}
+// 			.point {
+// 				width: 10rpx;
+// 				height: 10rpx;
+// 				border-radius: 5rpx;
+// 				background-color: #818181;
+// 				margin-right: 40rpx;
+// 			}
+// 			.line {
+// 				min-height:11vh;
+// 				width: 2rpx;
+// 				background: #dfdfdf;
+// 				border-left: 0.5rpx dashed #dfdfdf;
+// 				position: relative;
+// 				left: 4rpx;
+// 			}
+// 			.line.short {
+// 				height: 120rpx;
+// 			}
+// 			.iconBg {
+// 				width: 52rpx;
+// 				height: 52rpx;
+// 				background: var(--neutral-color-font);
+// 				line-height: 52rpx;
+// 				color: var(--neutral-color-white);
+// 				text-align: center;
+// 				box-sizing: border-box;
+// 				border-radius: 50%;
+// 				// display: flex;
+// 				// align-items: center;
+// 				// justify-content: center;
+// 				uni-cover-image {
+// 					width: 26rpx;
+// 					height: 26rpx;
+// 					align-items: center;
+// 					justify-content: center;
+// 					display: flex;
+// 					padding-left: 12rpx;
+// 					margin-left: 6rpx;
+// 					img{
+// 						width: 30rpx;
+// 						height: 20rpx;
+// 					}
+// 				}
+// 				&.harvest {
+// 					background: var(--essential-color-red);
+// 				}
+// 				.pickUp {
+// 					background: url(@/static/icon24.png) no-repeat;
+// 					background-size: contain;
+// 				}
+// 				.transport {
+// 					background: url(@/static/icon25.png) no-repeat;
+// 					background-size: contain;
+// 					width: 37rpx;
+// 					height: 28rpx;
+// 				}
+// 				.delivery {
+// 					background: url(@/static/paisong.png) no-repeat;
+// 					background-size: contain;
+// 					width: 37rpx;
+// 					height: 28rpx;
+// 				}
+// 			}
+// 		}
+// 		.logistics-orderInfo-right {
+// 			.status {
+// 				font-size: 32rpx;
+// 				color: #2a2929;
+// 				font-weight: bold;
+// 				margin-bottom: 6rpx;
+// 			}
+// 			.time {
+// 				margin-bottom: 6rpx;
+// 			}
+// 			.time,
+// 			.desc {
+// 				font-size: 24rpx;
+// 				color: #818181;
+// 			}
+// 			.desc {
+// 				float: left;
+// 				white-space: normal;
+// 				line-height: normal;
+// 				line-height: 34rpx;
+// 				min-height: 120rpx;
+// 			}
+// 			.desc.active {
+// 				// font-weight: bold;
+// 				color: #2a2929;
+// 				min-height: 160rpx;
+// 			}
+// 		}
+// 	}
+// }
+// .up {
+// 	animation: upAmimat 500ms infinite;
+// }
+// .down {
+// 	animation: downAmimat 500ms infinite;
+// }
+// @keyframes upAmimat {
+// 	from {
+// 		top: 200px;
+// 	}
+// 	to {
+// 		top: 200px;
+// 	}
+// }
+// @keyframes downAmimat {
+// 	from {
+// 		bottom: 0px;
+// 	}
+// 	to {
+// 		bottom: 0px;
+// 	}
+// }
+
+::v-deep .logistics-orderInfo{
+			&.logistics-orderInfo-item.active{
+				.red{
+					// font-weight: bold;
+						color:#E63E32!important;
+				
+				}
+				.logistics-orderInfo-left{
+					.circle{
+						background-color:#E63E32!important;
+					}
+					
+				}
+			}
+			&.logistics-orderInfo-item{
+				
+				display: flex;
+				.logistics-orderInfo-left{
+					// text-align: center;
+					.circle{
+						background-color:#818181 ;
+					}
+					.circle{
+						position: relative;
+						right: 20rpx;
+						width: 52rpx;
+						height: 52rpx;
+						text-align: center;
+						line-height: 52rpx;
+						border-radius: 50%;
+						font-size: 24rpx;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: white;
+						image{
+							// width:30rpx ;
+							// height:20rpx ;
+						}
+						.ys{
+							background: url(@/static/yunshuzhong.png) no-repeat;
+							background-size: contain;
+							width:36rpx ;
+							height:28rpx ;
+							margin-left: 4rpx;
+						}
+						.ps{
+							background: url(@/static/paisong.png) no-repeat;
+							background-size: contain;
+							width:34rpx ;
+							height:32rpx ;
+							margin-left:2rpx;
+						}
+					}
+					.point{
+						width: 10rpx;
+						height: 10rpx;
+						border-radius: 50%;
+						background-color:#818181 ;
+						margin-right: 40rpx;
+					}
+					.line{
+						height: 154rpx;
+						width: 2rpx;
+						border-left: 2rpx dashed #DFDFDF;
+						position: relative;
+						left: 4rpx;
+					}
+					.line.short{
+						height:120rpx ;
+					}
+			
+				}
+				.logistics-orderInfo-right{
+					.status{
+						font-size: 32rpx;
+						color:#2A2929 ;
+						font-weight: bold;
+						margin-bottom: 6rpx;
+					}
+					.time{
+						margin-bottom: 6rpx;
+					}
+					.time,.desc{
+						font-size: 24rpx;
+						color:#818181 ;
+					}
+					// .desc .red{
+					// 	// font-weight: bold;
+					// 		color:#E63E32!important;
+
+					// }
+				}
+			}
+			
+		}

@@ -1,0 +1,80 @@
+.payType{
+	::v-deep .uni-popup__wrapper {
+		height:480rpx;
+		background-color: white !important;
+		border-radius: 24rpx 24rpx 0 0;
+		padding: 29rpx 38rpx 43rpx;
+	}
+
+	.headers {
+		display: flex;
+		height: 56rpx;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 24rpx 24rpx 0 0;
+	
+		.header-title {
+			font-size: 32rpx;
+			color: #151515;
+			font-weight: bold;
+		}
+	
+		.close {
+			width: 40rpx;
+			height: 40rpx;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../../../static/guanbi.png');
+		}
+	}
+	.contents{
+		margin-top: 64rpx;
+		.content-item{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.left-content{
+				.title{
+					font-size: 28rpx;
+					color: #151515;
+					margin-bottom: 20rpx;
+				}
+				.subTitle{
+					font-size: 24rpx;
+					color: #888888;
+				}
+			}
+			.right-content{
+				.active,.checkbox{
+					width: 50rpx;
+					height: 50rpx;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				.checkbox{
+					background-image: url('../../../static/checkbox.png');
+				}
+				.active{
+					
+					background-image: url('../../../static/checkboxActive.png');
+				}
+			}
+		}
+		.content-item:last-child{
+			margin-top: 60rpx;
+		}
+	}
+	.footers{
+		.btn{
+			width: 404rpx;
+			height: 88rpx;
+			background-color: #E84134;
+			border-radius: 44rpx;
+			text-align: center;
+			line-height: 88rpx;
+			color: white;
+			margin: 0 auto;
+			margin-top: 43rpx;
+		}
+	}
+}

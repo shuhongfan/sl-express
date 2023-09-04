@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.sl-express</groupId>
+        <artifactId>sl-express-parent</artifactId>
+        <version>1.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sl-express.ms.driver</groupId>
+    <artifactId>sl-express-ms-driver-api</artifactId>
+    <version>1.1-SNAPSHOT</version>
+    <description>司机微服务-Feign接口</description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <sl-express-common.version>1.2-SNAPSHOT</sl-express-common.version>
+        <sl-express-ms-driver-domain.version>1.1-SNAPSHOT</sl-express-ms-driver-domain.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sl-express.common</groupId>
+            <artifactId>sl-express-common</artifactId>
+            <version>${sl-express-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sl-express.ms.driver</groupId>
+            <artifactId>sl-express-ms-driver-domain</artifactId>
+            <version>${sl-express-ms-driver-domain.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

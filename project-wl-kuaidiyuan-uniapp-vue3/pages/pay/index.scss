@@ -1,0 +1,131 @@
+body,
+uni-page-body,
+uni-page-head,
+.uni-page-head {
+	background-color: var(--neutral-color-background) !important;
+}
+.pickUp {
+	padding: 200rpx 0 0;
+	font-size: 36rpx;
+	line-height: 50rpx;
+	font-weight: 600;
+	text-align: center;
+	icon {
+		background: url(@/static/chenggong@2x.png) no-repeat;
+		background-size: contain;
+		width: 146rpx;
+		height: 146rpx;
+		margin-bottom: 24rpx;
+	}
+	.btnBox {
+		padding-top: 64rpx;
+	}
+	::v-deep .navigator-wrap {
+		width: 300rpx;
+		height: 100rpx;
+		line-height: 100rpx;
+		display: inline-block;
+		background: var(--neutral-color-white) !important;
+		border-radius: 20rpx;
+		color: var(--neutral-color-main) !important;
+		font-size: var(--font-size-16);
+		font-weight: 500;
+	}
+}
+.scanPay {
+	.boxBg {
+		margin-top: 32rpx;
+		padding: 40rpx;
+	}
+	.srCan {
+		text-align: center;
+		line-height: 40rpx;
+		padding-bottom: 50rpx;
+		image {
+			width: 416rpx;
+			height: 410rpx;
+		}
+		.text {
+			color: var(--essential-color-red);
+			font-size: 50rpx;
+			font-weight: 6 00;
+			line-height: 58rpx;
+			text {
+				font-size: var(--font-size-13);
+			}
+		}
+	}
+	
+}
+ :deep(uni-canvas){
+	 width: 416rpx;
+	 height: 400rpx;
+	 margin: 0 auto;
+	 display: inline-block;
+		
+	}
+.payBox {
+	.item {
+		display: flex;
+		align-items: center;
+		font-size: var(--font-size-16);
+		line-height: 52rpx;
+		icon {
+			width: 48rpx;
+					height: 48rpx;
+					margin-right: 20rpx;
+		}
+		& > view {
+			&:first-child {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				icon {
+					background: url(@/static/weChat.png) no-repeat;
+					background-size: contain;
+					
+				}
+			}
+			::v-deep .uni-radio-input {
+				margin-right: 0 !important;
+			}
+			.checkRadio {
+				uni-radio {
+					vertical-align: super;
+				}
+			}
+		}
+	}
+	&:last-child {
+		& > view {
+			&:first-child {
+				icon {
+					background: url(@/static/Alipay.png) no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+	}
+}
+.comPop {
+	
+	::v-deep .uni-popup__wrapper {width: 70%;
+		background: var(--neutral-color-white) !important;
+		border-radius: 24rpx !important;
+		font-size: var(--font-size-16);
+	  .con{
+			padding: 68rpx;
+			text-align: center;
+			
+			border-bottom: 1px solid var(--neutral-color-background);
+		}
+		uni-button{
+			background: none;
+			line-height: 94rpx;
+			height: 100rpx;
+			color: var(--neutral-color-font);
+			font-size: var(--font-size-16);
+		}
+	}
+}
+

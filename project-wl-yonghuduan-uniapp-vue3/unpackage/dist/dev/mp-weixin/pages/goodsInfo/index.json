@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "物品信息",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "goods-seach": "./components/goodsSearch",
+    "weight-and-volume": "./components/weightAndVolume"
+  }
+}

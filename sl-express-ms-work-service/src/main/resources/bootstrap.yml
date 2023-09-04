@@ -1,0 +1,27 @@
+application:
+  version: v1.0
+logging:
+  config: classpath:logback-spring.xml
+#  level:
+#    com.sl: debug
+spring:
+  main:
+    allow-circular-references: true #允许bean循环依赖
+  application:
+    name: sl-express-ms-work
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      #解决异常：swagger Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+      #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      matching-strategy: ant_path_matcher
+sl:
+  swagger:
+    package-path: com.sl.ms.work.controller
+    title: 神领物流 - work微服务接口文档
+    description: 提供运输任务、取派件任务等相关服务。
+    contact-name: 传智教育·研究院
+    contact-url: http://www.itcast.cn/
+    contact-email: yjy@itcast.cn
+    version: ${application.version}

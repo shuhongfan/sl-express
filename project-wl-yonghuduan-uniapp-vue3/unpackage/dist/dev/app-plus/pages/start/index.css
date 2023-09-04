@@ -1,0 +1,38 @@
+/* 水平间距 */
+/* 水平间距 */
+.starPage .page[data-v-31cb3308] {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.starPage .tit[data-v-31cb3308] {
+  width: 1.1875rem;
+  line-height: 1.25rem;
+  font-size: 1.125rem;
+  margin: 0 auto;
+  letter-spacing: 0.01313rem;
+  text-align: center;
+}
+.starPage .tit uni-text[data-v-31cb3308] {
+  display: block;
+  padding: 0 0 0.3125rem 0;
+}
+.starPage .map[data-v-31cb3308] {
+  background: url(../../static/star.png) no-repeat;
+  background-size: contain;
+  width: 10rem;
+  height: 7.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4.4375rem;
+}
+.starPage .logo[data-v-31cb3308] {
+  background: url(../../static/logo.png) no-repeat;
+  background-size: contain;
+  width: 7.5625rem;
+  height: 2.9375rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  bottom: 5%;
+}

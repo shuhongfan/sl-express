@@ -1,0 +1,113 @@
+/* 水平间距 */
+/* 水平间距 */
+.goBack.data-v-5f422b5e {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 2;
+  left: 26rpx;
+}
+.authentication-success.data-v-5f422b5e {
+  position: relative;
+}
+.authentication-success image.data-v-5f422b5e {
+  width: 100%;
+  height: 540rpx;
+}
+.authentication-success .tips.data-v-5f422b5e {
+  position: absolute;
+  left: 66rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: white;
+  width: 480rpx;
+  height: 72rpx;
+  top: 188rpx;
+}
+.authentication-success .info.data-v-5f422b5e {
+  position: relative;
+  bottom: 230rpx;
+  height: 278rpx;
+  background: #FFFFFF;
+  box-shadow: 0 4rpx 38rpx 0 rgba(66, 77, 84, 0);
+  border-radius: 24rpx;
+  margin: 0 30rpx;
+  position: relative;
+}
+.authentication-success .info .bg.data-v-5f422b5e {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.authentication-success .info .info-top.data-v-5f422b5e {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+.authentication-success .info .info-top .success.data-v-5f422b5e {
+  width: 152rpx;
+  height: 122rpx;
+  margin: 22rpx 16rpx 0 0;
+}
+.authentication-success .info .info-top .info-person.data-v-5f422b5e {
+  display: flex;
+  margin: 50rpx 0 0 32rpx;
+}
+.authentication-success .info .info-top .info-person .headUrl.data-v-5f422b5e {
+  height: 116rpx;
+  width: 116rpx;
+  margin-right: 32rpx;
+}
+.authentication-success .info .info-top .info-person .info-box .name.data-v-5f422b5e {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+  margin-bottom: 14rpx;
+}
+.authentication-success .info .info-top .info-person .info-box .identify-num.data-v-5f422b5e {
+  font-size: 26rpx;
+  color: #919191;
+}
+.authentication-success .info .info-title.data-v-5f422b5e {
+  position: absolute;
+  bottom: 40rpx;
+  left: 27rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #919191;
+}
+.authentication-success .info .info-title image.data-v-5f422b5e {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 6rpx;
+}
+.authentication-success .btn.data-v-5f422b5e {
+  width: 560rpx;
+  height: 90rpx;
+  background: #FFFFFF;
+  border-radius: 44rpx;
+  margin: 82rpx auto 0;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 90rpx;
+  position: relative;
+  bottom: 230rpx;
+}
+.authentication-success.data-v-5f422b5e .uni-popup-dialog .uni-button-color {
+  color: #E84134 !important;
+}
+.authentication-success.data-v-5f422b5e .uni-popup-dialog .uni-dialog-content {
+  font-size: 28rpx;
+  color: #919191;
+  text-align: center;
+}
+.authentication-success.data-v-5f422b5e .uni-popup-dialog .uni-dialog-title .uni-dialog-title-text {
+  font-size: 32rpx;
+  color: #323233;
+}

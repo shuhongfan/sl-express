@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "派件",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "search-page": "../../components/uni-search/index",
+    "uni-tab": "../../components/uni-tab/index",
+    "order-list": "./components/orderList"
+  }
+}

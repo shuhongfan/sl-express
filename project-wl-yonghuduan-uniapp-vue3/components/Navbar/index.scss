@@ -1,0 +1,18 @@
+.NavBar{
+	position: relative;
+	background-color: white;
+	.title{
+		font-weight: bold;
+		font-size: 32rpx;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.navbar-image{
+		width: 40rpx;
+		height: 40rpx;
+		position: absolute;
+		left: 26rpx;
+	}
+}

@@ -1,0 +1,87 @@
+body,
+uni-page-body,
+{
+	background-color: var(--neutral-color-white) !important;
+}
+.recentBox {
+	padding: 34rpx 38rpx;
+	font-size: var(--font-size-12);
+	box-shadow: inset 0 22rpx 22rpx 0 rgba(162,162,162,0.06);
+	background: #fff;
+	// min-height: calc(100vh - 280rpx);
+	.tit {
+		height: 36rpx;
+		line-height: 36rpx;
+		font-size: var(--font-size-13);
+		display: flex;
+		align-items: center;
+		text{
+			flex: 1;
+			line-height: 36rpx;
+		}
+		icon{
+			width: 32rpx;
+			height: 32rpx;
+			background: url(@/static/delete.png) no-repeat;
+			background-size: contain;
+		}
+	}
+	.recentList {
+		display: flex;
+		flex-flow: row wrap;
+		align-content: flex-start;
+		margin-left: -18rpx;
+		position: relative;
+		.item {
+			margin-top: 28rpx;
+			box-sizing: border-box;
+			
+			flex: 0 0 25%;
+			height: 56rpx;
+			line-height: 56rpx;
+			background: var(--neutral-color-background);
+			border-radius: 28rpx;
+			margin-left: 18rpx;
+			padding: 0 32rpx;
+		}
+	}
+}
+.iconUp{
+	position: absolute;
+	bottom: 0;
+	right:22rpx;
+	text-align: center;
+	.icon_img{
+		width: 44rpx;
+		height: 44rpx;
+	}
+}
+.serachList{
+	.iconTip{
+		icon{
+			width:40rpx ;
+			height: 44rpx;
+			background: url(@/static/icon013.png);
+			background-size: contain;
+		}
+		.send{
+			background: url(@/static/icon014.png);
+			background-size: contain;
+		}
+	}
+	.item{
+		// box-shadow: 0 0 11px 11px rgba(162,162,162,0.06);
+		border-radius: 20rpx;
+	}
+}
+::v-deep .uni-scroll-view{
+	overflow:inherit !important;
+}
+.concelBtn{
+	position: absolute;
+	right: 20rpx;
+	bottom: 70rpx;
+}
+.boxBg{
+	box-shadow: 0 0 22rpx 22rpx rgba(162, 162, 162, 0.06)
+}

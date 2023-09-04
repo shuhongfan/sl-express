@@ -1,0 +1,13 @@
+/* 水平间距 */
+/* 水平间距 */
+.navBox .input-view.data-v-39bdeeba {
+  position: relative;
+}
+.navBox .input-view icon.data-v-39bdeeba {
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  right: 220rpx;
+  top: 15rpx;
+  z-index: 9;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings
+        xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <!-- 本地仓库 -->
+    <localRepository>F:\maven\repository</localRepository>
+
+    <!-- 配置私服中deploy的账号 -->
+    <servers>
+        <server>
+            <id>sl-releases</id>
+            <username>deployment</username>
+            <password>deployment123</password>
+        </server>
+        <server>
+            <id>sl-snapshots</id>
+            <username>deployment</username>
+            <password>deployment123</password>
+        </server>
+    </servers>
+
+    <!-- 使用阿里云maven镜像，排除私服资源库 -->
+    <mirrors>
+        <mirror>
+            <id>mirror</id>
+            <mirrorOf>central,jcenter,!sl-releases,!sl-snapshots</mirrorOf>
+            <name>mirror</name>
+            <url>https://maven.aliyun.com/nexus/content/groups/public</url>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>sl</id>
+            <!-- 配置项目deploy的地址 -->
+            <properties>
+                <altReleaseDeploymentRepository>
+                    sl-releases::default::http://maven.sl-express.com/nexus/content/repositories/releases/
+                </altReleaseDeploymentRepository>
+                <altSnapshotDeploymentRepository>
+                    sl-snapshots::default::http://maven.sl-express.com/nexus/content/repositories/snapshots/
+                </altSnapshotDeploymentRepository>
+            </properties>
+            <!-- 配置项目下载依赖的私服地址 -->
+            <repositories>
+                <repository>
+                    <id>sl-releases</id>
+                    <url>http://maven.sl-express.com/nexus/content/repositories/releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>sl-snapshots</id>
+                    <url>http://maven.sl-express.com/nexus/content/repositories/snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+         <!-- 激活配置 -->
+        <activeProfile>sl</activeProfile>
+    </activeProfiles>
+
+</settings>

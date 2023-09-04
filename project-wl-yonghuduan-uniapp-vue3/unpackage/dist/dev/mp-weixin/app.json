@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/express-delivery/index",
+    "pages/goodsInfo/index",
+    "pages/address/index",
+    "pages/login/index",
+    "pages/pickup/index",
+    "pages/my/index"
+  ],
+  "subPackages": [
+    {
+      "root": "subPages",
+      "pages": [
+        "electronic-stub/index",
+        "authentication-success/index",
+        "realName-authentication/index",
+        "order-success/index",
+        "account-rules/index",
+        "order-info/index",
+        "order-cancel/index",
+        "address-info/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "神领物流",
+    "backgroundColor": "#F8F8F8",
+    "onReachBottomDistance": 50,
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#000000",
+    "selectedColor": "#E94739",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "寄快递",
+        "iconPath": "static/jikuaidi.png",
+        "selectedIconPath": "static/jikuaidiActive.png"
+      },
+      {
+        "pagePath": "pages/pickup/index",
+        "text": "查快递",
+        "iconPath": "static/chakuaidi.png",
+        "selectedIconPath": "static/chakuaidiActive.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/wode.png",
+        "selectedIconPath": "static/wodeActive.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "123"
+    }
+  },
+  "usingComponents": {
+    "nav-bar": "/components/Navbar/index",
+    "net-fail": "/components/NetFail/index"
+  }
+}

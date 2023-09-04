@@ -1,0 +1,166 @@
+.address-info{
+	background-color: #F3F5F9 !important;
+	height: 85vh;
+	.approve-tips{
+		height: 90rpx;
+		background: #FAF4DE;
+		padding: 5rpx 18rpx 8rpx 24rpx;
+		display: flex;
+		align-items: center;
+		.circle{
+			width: 10rpx;
+			height: 10rpx;
+			background-color:#E88649 ;
+			border-radius: 50%;
+			margin-right: 20rpx;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.content{
+			font-size: 22rpx;
+			color:#EA8A57 ;
+			display: inline-block;
+			vertical-align: middle;
+			width: 515rpx;
+			margin-right: 20rpx;
+		}
+		.content.active{
+			width: 650rpx;
+		}
+		.btn{
+			width: 132rpx;
+			height: 44rpx;
+			background: #EA8A57;
+			border-radius: 22rpx;
+			color:white ;
+			text-align: center;
+			line-height: 44rpx;
+			font-size: 22rpx;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.approve-tips.isRealNameAuth{
+		height: 60rpx;
+		.content{
+			width: 100%;
+		}
+	}
+	.address-box{
+		height: 510rpx;
+		background: #FFFFFF;
+		border-radius: 20rpx;
+		margin: 19rpx 19rpx  0rpx 19rpx;
+		padding:32rpx 28rpx  0rpx ;
+		.address-title{
+			font-size: 32rpx;
+			font-weight: bold;
+		}
+		.uni-input{
+			width: 400rpx;
+		}
+		.uni-input.active{
+			font-weight: bold;
+		}
+		.send-get-title{
+			display: flex;
+			align-items: center;
+			.toAddress{
+				width: 104rpx;
+				height: 46rpx;
+				border: 2rpx solid #888888;
+				border-radius: 22rpx;
+				text-align: center;
+				line-height: 46rpx;
+				margin-left: 20rpx;
+				font-size: 22rpx;
+			}
+			.send,.get{
+				width: 38rpx;
+				height: 38rpx;
+				border-radius: 50%;
+				font-size: 24rpx;
+				color: white;
+				text-align: center;
+				margin-right: 20rpx;
+			}
+			.send{
+				background-color:#000000 ;
+			}
+			.get{
+				background-color:#E63E32 ;
+			}
+			.subTitle{
+				font-weight: bold;
+			}
+		}
+		.name-number{
+			display: flex;
+			margin-top: 56rpx;
+			border-bottom: 2rpx solid #F4F4F4;
+			padding-bottom: 29rpx;
+		}
+		.city-area{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 2rpx solid #F4F4F4;
+			padding: 36rpx 0;
+			.label{
+				font-size: 30rpx;
+				color: #888;
+			}
+			.active.label{
+				color: #151515;
+				font-weight: bold;
+			}
+			.arrow{
+				width: 12rpx;
+				height: 20rpx;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../../static/icon15.png');
+			}
+		}
+		.address-detail{
+			border-bottom: 2rpx solid #F4F4F4;
+			padding: 36rpx 0;
+		}
+		.footer{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-top: 30rpx;
+			.save-address{
+				display: flex;
+				align-items: center;
+				.label{
+					font-size: 30rpx;
+					color: #888;
+				}
+				.active,.checkbox{
+					width: 40rpx;
+					height: 40rpx;
+					background-repeat: no-repeat;
+					background-size: contain;
+					margin-right: 10rpx;
+				}
+				.checkbox{
+					background-image: url('../../static/checkbox.png');
+				}
+				.active{
+				
+					background-image: url('../../static/checkboxActive.png');
+				}
+			}
+			.reset-btn{
+				font-size: 30rpx;
+				color: #888;
+			}
+			.reset-btn.active{
+				color: #151515;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,119 @@
+.electronic-stub{
+	background-color: #F3F5F9 !important;
+	.content{
+		background: #FFFFFF;
+		border-radius: 10px;
+		margin: 14rpx 18rpx 0;
+		padding-bottom: 50rpx;
+		overflow: hidden;
+		.code-box{
+			margin: 40rpx 60rpx;
+			margin-bottom: 10rpx;
+			.code-url{
+				width: 600rpx;
+				height: 100rpx;
+			}
+			.order-num{
+				font-size: 24rpx;
+				color:#000000 ;
+				text-align: center;
+			}
+		}
+		.address-box{
+			height: 284rpx;
+			background: #FFFFFF;
+			border-radius: 20rpx;
+			display: flex;
+			padding: 42rpx 0;
+			margin: 0 28rpx;
+			border-bottom: 2rpx solid #F4F4F4;
+			padding-bottom: 0rpx;
+			.left{
+				margin-right: 20rpx;
+				margin-top: 5rpx;
+				.send,.get{
+					width: 40rpx;
+					height: 40prx;
+					border-radius: 50%;
+					text-align: center;
+					line-height: 40rpx;
+					font-size: 24rpx;
+				}
+				.send{
+					background: #000000;
+					color: white;
+				}
+				.get{
+					background: #E63E32;
+					color: white;
+				}
+				.line{
+					width: 2rpx;
+					height: 120rpx;
+					border-left: 2rpx dashed #D5D1D1;
+					margin-left: 18rpx;
+				}
+			}
+			.right{
+				width: 100%;
+				position: relative;
+				.send-people,.get-people{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					.send-sub-title{
+						color: #151515;
+						font-size: 32rpx;
+						margin-bottom: 6rpx;
+						font-weight: bold;
+						display: flex;
+						align-items: center;
+						.user-phone{
+							color: #888888;
+							font-size: 24rpx;
+							font-weight: normal;
+							margin-left: 10rpx;
+						}
+						image{
+							width: 40rpx;
+							height: 40rpx;
+							margin-left: 10rpx;
+						}
+					}
+					.send-desc{
+						color: #888888;
+						font-size: 24rpx;
+					}
+				}
+				.get-people{
+					margin-top:80rpx ;
+				}
+				.line{
+					position: absolute;
+					width: 100%;
+					height: 2rpx;
+					background-color: #F4F4F4;
+					top: 44%;
+					left: 0;
+				}
+			}
+		}
+		.order-info{
+			margin-top: 40rpx;
+			padding:0 32rpx ;
+			.order-item{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-top: 28rpx;
+				.label{
+					color: #888888;
+					font-size: 24rpx;
+				}
+				.value{
+					font-size: 24rpx;
+				}
+			}
+		}
+	}
+}

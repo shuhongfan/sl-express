@@ -1,0 +1,505 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>支付/退款</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/支付_退款/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/支付_退款/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u110" class="ax_default box_2">
+        <img id="u110_img" class="img " src="images/支付_退款/u110.svg"/>
+        <div id="u110_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u111" class="ax_default _文本段落">
+        <div id="u111_div" class=""></div>
+        <div id="u111_text" class="text ">
+          <p><span style="text-decoration:none;">退款规则：</span></p><p><span style="text-decoration:none;">已支付的订单，用户在各阶段均可联系客服申请退款</span></p><p><span style="text-decoration:none;">根据运营规则，符合退款条件的，客服通过管理后台操作退款</span></p><p><span style="text-decoration:none;">已退款订单，在订单列表右上角标识已退款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u112" class="ax_default box_1">
+        <div id="u112_div" class=""></div>
+        <div id="u112_text" class="text ">
+          <p><span style="text-decoration:none;">其他状态：</span></p><p><span style="text-decoration:none;">售后状态（对接售后系统，二期）：申请售后、退款完成</span></p><p><span style="text-decoration:none;">评价状态（对接评价系统，二期）：未评价、已评价</span></p><p><span style="text-decoration:none;">订单状态（对接电商，划分物流状态与订单状态、三期）：等待付款、等待发货、确认收货、 交易完成、交易关闭</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u113" class="ax_default box_1">
+        <div id="u113_div" class=""></div>
+        <div id="u113_text" class="text ">
+          <p><span style="text-decoration:none;">异常订单：一期不考虑订单异常情况，只做司机运输任务异常情况</span></p><p><span style="text-decoration:none;">取消订单：快递员揽件前均可取消，揽件后不可取消，可退回、可退款</span></p><p><span style="text-decoration:none;">订单拦截：快递员揽件后，均可联系客服拦截，二期实现</span></p><p><span style="text-decoration:none;">订单退款：付款后，任何阶段都可以退款，退款订单标识已退款</span></p><p><span style="text-decoration:none;">预计送达时间：二期实现</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u114" class="ax_default _文本段落">
+        <div id="u114_div" class=""></div>
+        <div id="u114_text" class="text ">
+          <p><span style="text-decoration:none;">支付状态：独立状态，不与订单状态绑定</span></p><p><span style="text-decoration:none;">用户端只显示【待支付】、【已支付】、【已退款】3种状态</span></p><p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;">待支付：未支付订单</span></p><p><span style="text-decoration:none;">支付中：等待用户支付，一般15-20min有效期</span></p><p><span style="text-decoration:none;">已支付：用户已支付订单</span></p><p><span style="text-decoration:none;">支付失败：支付出现问题，如金额不足等，显示支付失败，可以重新发起支付</span></p><p><span style="text-decoration:none;">已退款：付款原路返回</span></p><p><span style="text-decoration:none;">已作废：超时未支付，已作废</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u115" class="ax_default shape">
+        <div id="u115_div" class=""></div>
+        <div id="u115_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u116" class="ax_default paragraph">
+        <div id="u116_div" class=""></div>
+        <div id="u116_text" class="text ">
+          <p><span style="text-decoration:none;">运单号：SL182000986789</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u117" class="ax_default paragraph">
+        <div id="u117_div" class=""></div>
+        <div id="u117_text" class="text ">
+          <p><span style="text-decoration:none;">已揽件</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u118" class="ax_default paragraph">
+        <div id="u118_div" class=""></div>
+        <div id="u118_text" class="text ">
+          <p><span style="text-decoration:none;color:#7F7F7F;">已揽件：</span><span style="text-decoration:none;color:#000000;">神领快递员已揽件， 揽收人【周晨，电话 1828…</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u119" class="ax_default paragraph">
+        <div id="u119_div" class=""></div>
+        <div id="u119_text" class="text ">
+          <p><span style="text-decoration:none;color:#7F7F7F;">预计送达时间：</span><span style="text-decoration:none;color:#000000;">2022-05-18&nbsp; 22:00</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u120" class="ax_default _形状">
+        <div id="u120_div" class=""></div>
+        <div id="u120_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u121" class="ax_default _文本段落">
+        <div id="u121_div" class=""></div>
+        <div id="u121_text" class="text ">
+          <p><span style="text-decoration:none;">分享</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u122" class="ax_default _线段">
+        <img id="u122_img" class="img " src="images/支付_退款/u122.svg"/>
+        <div id="u122_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u123" class="ax_default _形状">
+        <img id="u123_img" class="img " src="images/支付_退款/u123.svg"/>
+        <div id="u123_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u124" class="ax_default" data-left="166" data-top="918" data-width="253" data-height="48">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u125" class="ax_default paragraph">
+          <div id="u125_div" class=""></div>
+          <div id="u125_text" class="text ">
+            <p><span style="text-decoration:none;">柳州市</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u126" class="ax_default paragraph">
+          <div id="u126_div" class=""></div>
+          <div id="u126_text" class="text ">
+            <p><span style="text-decoration:none;">王店长</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u127" class="ax_default paragraph">
+          <div id="u127_div" class=""></div>
+          <div id="u127_text" class="text ">
+            <p><span style="text-decoration:none;">北京市</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u128" class="ax_default paragraph">
+          <div id="u128_div" class=""></div>
+          <div id="u128_text" class="text ">
+            <p><span style="text-decoration:none;">李方华</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (水滴形) -->
+      <div id="u129" class="ax_default marker">
+        <img id="u129_img" class="img " src="images/支付_退款/u129.svg"/>
+        <div id="u129_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u130" class="ax_default _形状">
+        <div id="u130_div" class=""></div>
+        <div id="u130_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u131" class="ax_default paragraph">
+        <div id="u131_div" class=""></div>
+        <div id="u131_text" class="text ">
+          <p><span style="text-decoration:none;">待支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u132" class="ax_default shape">
+        <div id="u132_div" class=""></div>
+        <div id="u132_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u133" class="ax_default paragraph">
+        <div id="u133_div" class=""></div>
+        <div id="u133_text" class="text ">
+          <p><span style="text-decoration:none;">运单号：SL182000986789</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片 ) -->
+      <div id="u134" class="ax_default image">
+        <img id="u134_img" class="img " src="images/支付_退款/u134.png"/>
+        <div id="u134_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u135" class="ax_default paragraph">
+        <div id="u135_div" class=""></div>
+        <div id="u135_text" class="text ">
+          <p><span style="text-decoration:none;">北京市</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u136" class="ax_default paragraph">
+        <div id="u136_div" class=""></div>
+        <div id="u136_text" class="text ">
+          <p><span style="text-decoration:none;">李方华</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u137" class="ax_default paragraph">
+        <div id="u137_div" class=""></div>
+        <div id="u137_text" class="text ">
+          <p><span style="text-decoration:none;">柳州市</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u138" class="ax_default paragraph">
+        <div id="u138_div" class=""></div>
+        <div id="u138_text" class="text ">
+          <p><span style="text-decoration:none;">王店长</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u139" class="ax_default _形状">
+        <img id="u139_img" class="img " src="images/支付_退款/u123.svg"/>
+        <div id="u139_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u140" class="ax_default paragraph">
+        <div id="u140_div" class=""></div>
+        <div id="u140_text" class="text ">
+          <p><span style="text-decoration:none;">运输中</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u141" class="ax_default paragraph">
+        <div id="u141_div" class=""></div>
+        <div id="u141_text" class="text ">
+          <p><span style="text-decoration:none;color:#7F7F7F;">运输中：</span><span style="text-decoration:none;color:#000000;">快件发往【上海中转场】</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u142" class="ax_default paragraph">
+        <div id="u142_div" class=""></div>
+        <div id="u142_text" class="text ">
+          <p><span style="text-decoration:none;color:#7F7F7F;">预计送达时间：</span><span style="text-decoration:none;color:#000000;">2022-05-18&nbsp; 22:00</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u143" class="ax_default _形状">
+        <div id="u143_div" class=""></div>
+        <div id="u143_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u144" class="ax_default _文本段落">
+        <div id="u144_div" class=""></div>
+        <div id="u144_text" class="text ">
+          <p><span style="text-decoration:none;">分享</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u145" class="ax_default _线段">
+        <img id="u145_img" class="img " src="images/支付_退款/u122.svg"/>
+        <div id="u145_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水滴形) -->
+      <div id="u146" class="ax_default marker">
+        <img id="u146_img" class="img " src="images/支付_退款/u129.svg"/>
+        <div id="u146_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u147" class="ax_default _形状">
+        <div id="u147_div" class=""></div>
+        <div id="u147_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u148" class="ax_default paragraph">
+        <div id="u148_div" class=""></div>
+        <div id="u148_text" class="text ">
+          <p><span style="text-decoration:none;">已支付</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u149" class="ax_default shape">
+        <div id="u149_div" class=""></div>
+        <div id="u149_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u150" class="ax_default paragraph">
+        <div id="u150_div" class=""></div>
+        <div id="u150_text" class="text ">
+          <p><span style="text-decoration:none;">运单号：SL182000986789</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片 ) -->
+      <div id="u151" class="ax_default image">
+        <img id="u151_img" class="img " src="images/支付_退款/u134.png"/>
+        <div id="u151_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u152" class="ax_default paragraph">
+        <div id="u152_div" class=""></div>
+        <div id="u152_text" class="text ">
+          <p><span style="text-decoration:none;">北京市</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u153" class="ax_default paragraph">
+        <div id="u153_div" class=""></div>
+        <div id="u153_text" class="text ">
+          <p><span style="text-decoration:none;">李方华</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u154" class="ax_default paragraph">
+        <div id="u154_div" class=""></div>
+        <div id="u154_text" class="text ">
+          <p><span style="text-decoration:none;">柳州市</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u155" class="ax_default paragraph">
+        <div id="u155_div" class=""></div>
+        <div id="u155_text" class="text ">
+          <p><span style="text-decoration:none;">王店长</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u156" class="ax_default _形状">
+        <img id="u156_img" class="img " src="images/支付_退款/u123.svg"/>
+        <div id="u156_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u157" class="ax_default paragraph">
+        <div id="u157_div" class=""></div>
+        <div id="u157_text" class="text ">
+          <p><span style="text-decoration:none;">运输中</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u158" class="ax_default paragraph">
+        <div id="u158_div" class=""></div>
+        <div id="u158_text" class="text ">
+          <p><span style="text-decoration:none;color:#7F7F7F;">运输中：</span><span style="text-decoration:none;color:#000000;">快件发往【上海中转场】</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u159" class="ax_default paragraph">
+        <div id="u159_div" class=""></div>
+        <div id="u159_text" class="text ">
+          <p><span style="text-decoration:none;color:#7F7F7F;">预计送达时间：</span><span style="text-decoration:none;color:#000000;">2022-05-18&nbsp; 22:00</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u160" class="ax_default _形状">
+        <div id="u160_div" class=""></div>
+        <div id="u160_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u161" class="ax_default _文本段落">
+        <div id="u161_div" class=""></div>
+        <div id="u161_text" class="text ">
+          <p><span style="text-decoration:none;">分享</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u162" class="ax_default _线段">
+        <img id="u162_img" class="img " src="images/支付_退款/u122.svg"/>
+        <div id="u162_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水滴形) -->
+      <div id="u163" class="ax_default marker">
+        <img id="u163_img" class="img " src="images/支付_退款/u129.svg"/>
+        <div id="u163_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u164" class="ax_default _形状">
+        <div id="u164_div" class=""></div>
+        <div id="u164_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u165" class="ax_default paragraph">
+        <div id="u165_div" class=""></div>
+        <div id="u165_text" class="text ">
+          <p><span style="text-decoration:none;">已退款</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片 ) -->
+      <div id="u166" class="ax_default image">
+        <img id="u166_img" class="img " src="images/支付_退款/u166.png"/>
+        <div id="u166_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

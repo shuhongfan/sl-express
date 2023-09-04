@@ -1,0 +1,23 @@
+application:
+  version: v1.0
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  application:
+    name: sl-express-ms-service-scope
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      #解决异常：swagger Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+      #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      matching-strategy: ant_path_matcher
+sl:
+  swagger:
+    package-path: com.sl.ms.scope.controller
+    title: 神领物流 - 服务范围微服务接口文档
+    description: 该微服务完成网点、快递员的服务范围相关业务功能。
+    contact-name: 传智教育·研究院
+    contact-url: http://www.itcast.cn/
+    contact-email: yjy@itcast.cn
+    version: ${application.version}

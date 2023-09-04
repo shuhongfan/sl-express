@@ -1,0 +1,36 @@
+application:
+  version: v1.0
+logging:
+  config: classpath:logback-spring.xml
+spring:
+  application:
+    name: sl-express-ms-trade
+  profiles:
+    active: local
+  mvc:
+    pathmatch:
+      #解决异常：swagger Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+      #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      matching-strategy: ant_path_matcher
+sl:
+  job:
+    trading:
+      count: ${job.trading.count} #每次查询交易单的数量
+    refund:
+      count: ${job.refund.count} #每次查询退款单的数量
+  qrcode: #二维码生成参数
+    margin: ${qrcode.margin} #边距，二维码和背景之间的边距
+    fore-color: ${qrcode.fore-color} #二维码颜色，默认黑色
+    back-color: ${qrcode.back-color} #背景色，默认白色
+    #低级别的像素块更大，可以远距离识别，但是遮挡就会造成无法识别。高级别则相反，像素块小，允许遮挡一定范围，但是像素块更密集。
+    error-correction-level: ${qrcode.error-correction-level} #纠错级别，可选参数：L、M、Q、H，默认：M
+    width: ${qrcode.width} #宽
+    height: ${qrcode.height} #高
+  swagger:
+    package-path: com.sl.ms.trade.controller
+    title: 神领物流 - 交易（支付）微服务接口文档
+    description: 该微服务完记录交易、对接支付宝微信支付平台。
+    contact-name: 传智教育·研究院
+    contact-url: http://www.itcast.cn/
+    contact-email: yjy@itcast.cn
+    version: ${application.version}

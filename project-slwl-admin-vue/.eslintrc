@@ -1,0 +1,115 @@
+{
+  // "extends": [
+  //   "plugin:@typescript-eslint/recommended",
+  //   "eslint-config-airbnb-base",
+  //   "@vue/typescript/recommended",
+  //   // "plugin:vue/vue3-recommended",
+  //   "plugin:vue-scoped-css/base",
+  //   "plugin:prettier/recommended"
+  // ],
+  "env": {
+    // 浏览器全局变量
+    "browser": true,
+    "node": true,
+    "jest": true,
+    // 启用 ES6 语法支持以及新的 ES6 全局变量或类型
+    "es6": true
+  },
+  "globals": {
+    "defineProps": "readonly",
+    "defineEmits": "readonly"
+  },
+  "plugins": ["vue", "@typescript-eslint"],
+  "parserOptions": {
+    // parser指定解析器，默认的为espree。babel-eslint是一个Babel parser的包装器，这个包装器使得 Babel parser 可以和 ESLint 协调工作
+    "parser": "babel-eslint",
+     // 指定来源的类型，'script' (默认) 或 'module'（如果你的代码是 ECMAScript 模块)
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "rules": {
+    "no-console": "off",
+    "no-continue": "off",
+    "no-restricted-syntax": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "guard-for-in": "off",
+
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/first": "off", // https://github.com/vuejs/vue-eslint-parser/issues/58
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "vue/first-attribute-linebreak": 0,
+
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-types": "off",
+    "class-methods-use-this": "off" // 因为AxiosCancel必须实例化而能静态化所以加的规则，如果有办法解决可以取消
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        // "vue/component-name-in-template-casing": [2, "kebab-case"],//模板中是否将组件名称强制转化成横杠连接的命名
+        "vue/require-default-prop": 0,
+        "vue/multi-word-component-names": 0,
+        "vue/no-reserved-props": 0,
+        "vue/no-v-html": 0,
+        "vue-scoped-css/enforce-style-type": ["error", { "allows": ["scoped"] }],
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"], // https://github.com/typescript-eslint eslint-recommended
+      "rules": {
+        "constructor-super": "off", // ts(2335) & ts(2377)
+        "getter-return": "off", // ts(2378)
+        "no-const-assign": "off", // ts(2588)
+        // 禁止function定义中出现重名参数
+        "no-dupe-args": "off", // ts(2300)
+        "no-dupe-class-members": "off", // ts(2393) & ts(2300)
+        "no-dupe-keys": "off", // ts(1117)
+        "no-func-assign": "off", // ts(2539)
+        "no-import-assign": "off", // ts(2539) & ts(2540)
+        "no-new-symbol": "off", // ts(2588)
+        "no-obj-calls": "off", // ts(2349)
+        "no-redeclare": "off", // ts(2451)
+        "no-setter-return": "off", // ts(2408)
+        "no-this-before-super": "off", // ts(2376)
+        "no-undef": "off", // ts(2304)
+        //禁止在return、throw、continue、break语句之后出现不可达代码
+        "no-unreachable": "off", // ts(7027)
+        "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
+        "no-var": "error", // ts transpiles let/const to var, so no need for vars any more
+        "prefer-const": "error", // ts provides better types with const
+        "prefer-rest-params": "error", // ts provides better types with rest args over arguments
+        "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
+        "valid-typeof": "off" // ts(2367)
+      }
+    }
+  ]
+}

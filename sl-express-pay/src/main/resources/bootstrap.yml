@@ -1,0 +1,19 @@
+server:
+  port: 18099
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 1000
+      min-spare: 30
+spring:
+  application:
+    name: sl-express-pay
+  mvc:
+    pathmatch:
+      #解决异常：swagger Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+      #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      matching-strategy: ant_path_matcher
+  redis: #redis的配置
+    port: 6379
+    host: 192.168.150.101
+    password: 123321

@@ -1,0 +1,36 @@
+server:
+  port: 18085
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 1000
+      min-spare: 30
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: nacos-service.yjy-public-slwl-java.svc.cluster.local:8848
+      discovery:
+        namespace: 92312ba8-1119-440f-81af-c29618df303b
+      config:
+        namespace: 92312ba8-1119-440f-81af-c29618df303b
+        shared-configs: #共享配置
+          - data-id: shared-spring-seata.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-rabbitmq.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-mysql.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-redis.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-mybatis-plus.yml
+            group: SHARED_GROUP
+            refresh: false
+sl:
+  id:
+    leaf: ${sl.id.leaf} #指定美团leaf服务地址

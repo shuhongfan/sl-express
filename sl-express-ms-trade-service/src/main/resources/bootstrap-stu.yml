@@ -1,0 +1,33 @@
+server:
+  port: 18096
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 1000
+      min-spare: 30
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: 192.168.150.101:8848
+      discovery:
+        namespace: ecae68ba-7b43-4473-a980-4ddeb6157bdc
+      config:
+        namespace: ecae68ba-7b43-4473-a980-4ddeb6157bdc
+        shared-configs: #共享配置
+          - data-id: shared-spring-seata.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-mysql.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-mybatis-plus.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-redis.yml
+            group: SHARED_GROUP
+            refresh: false
+          - data-id: shared-spring-xxl-job.yml
+            group: SHARED_GROUP
+            refresh: false

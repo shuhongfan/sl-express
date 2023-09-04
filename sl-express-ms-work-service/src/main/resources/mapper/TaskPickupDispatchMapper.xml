@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sl.ms.work.mapper.TaskPickupDispatchMapper">
+
+    <select id="findCountByCourierIds" resultType="com.sl.ms.work.domain.dto.CourierTaskCountDTO">
+        SELECT
+            COUNT(1) `count`,
+            courier_id
+        FROM sl_pickup_dispatch_task t
+        WHERE
+            t.courier_id IN  <foreach collection="courierIds" item="courierId" open="(" close=")" separator=",">#{courierId}</foreach>
+        AND t.created BETWEEN #{startDateTime} AND #{endDateTime}
+        AND t.task_type = #{type}
+        GROUP BY courier_id
+    </select>
+
+</mapper>

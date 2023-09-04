@@ -1,0 +1,69 @@
+.account-rules{
+	background-color: white;
+	height: 100vh;
+	padding: 72rpx 51rpx 0;
+	.top{
+		display: flex;
+		justify-content: space-around;
+		background-color: #F8F9FB;
+		padding:22rpx 46rpx 38rpx 36rpx ;
+		margin-bottom: 50rpx;
+		.top-item{
+			
+			text-align: center;
+			.top-img{
+				width:116rpx ;
+				height:116rpx ;
+			}
+			.top-title{
+				font-size: 24rpx;
+				color: #151515;
+				text-align: center;
+			}
+			.top-subTitle{
+				font-size: 20rpx;
+				color: #888888;
+				text-align: center;
+			}
+		}
+		.top-item:first-child{
+			.top-img{
+				margin-left: 10rpx;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../../static/kouhong.png');	
+			}
+		}
+		.top-item:nth-child(2){
+			.top-img{
+				margin-left: 15rpx;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../../static/xiong.png');	
+			}
+		}
+		.top-item:last-child{
+			.top-img{
+				margin-left: 30rpx;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../../static/bingxiang.png');	
+			}
+		}
+	}
+	.first-content,.second-content,.third-content,.fourth-content{
+		.title{
+			font-size:24rpx;
+			color:#151515 ;
+			font-weight: bold;
+		}
+		.content{
+			font-size:24rpx;
+			color:#151515 ;
+			line-height: 40rpx;
+		}
+	}
+	.second-content,.third-content,.fourth-content{
+		margin-top:36rpx ;
+	}
+}
