@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sl-express-ms-carriage-api" />
+        <module name="sl-express-ms-dispatch-service" />
+        <module name="sl-express-ms-track-domain" />
+        <module name="sl-express-ms-transport-api" />
+        <module name="sl-express-ms-driver-service" />
+        <module name="sentinel-okhttp-adapter" />
+        <module name="sentinel-apache-dubbo-adapter" />
+        <module name="sentinel-transport-spring-mvc" />
+        <module name="sl-express-xxl-job" />
+        <module name="sentinel-demo-transport-spring-mvc" />
+        <module name="sentinel-demo-basic" />
+        <module name="sl-express-ms-track-api" />
+        <module name="sentinel-datasource-eureka" />
+        <module name="sl-express-ms-web-courier" />
+        <module name="sl-express-pay" />
+        <module name="sentinel-demo-motan" />
+        <module name="sentinel-datasource-zookeeper" />
+        <module name="sl-express-ms-user-service" />
+        <module name="sl-express-ms-oms-service" />
+        <module name="sentinel-spring-webflux-adapter" />
+        <module name="sl-express-ms-oms-api" />
+        <module name="sl-express-ms-trade-domain" />
+        <module name="sentinel-datasource-extension" />
+        <module name="sentinel-datasource-etcd" />
+        <module name="sl-express-ms-trade-service" />
+        <module name="sl-express-ms-sms-domain" />
+        <module name="sentinel-sofa-rpc-adapter" />
+        <module name="sentinel-annotation-cdi-interceptor" />
+        <module name="sentinel-datasource-apollo" />
+        <module name="sl-express-ms-web-customer" />
+        <module name="sentinel-transport-simple-http" />
+        <module name="sentinel-demo-zookeeper-datasource" />
+        <module name="sl-express-ms-transport-info-api" />
+        <module name="sl-express-ms-transport-info-service" />
+        <module name="sentinel-spring-cloud-gateway-adapter" />
+        <module name="sl-express-ms-trade-api" />
+        <module name="sentinel-dubbo-adapter" />
+        <module name="sentinel-datasource-consul" />
+        <module name="sentinel-apache-httpclient-adapter" />
+        <module name="sentinel-zuul2-adapter" />
+        <module name="sl-express-gateway" />
+        <module name="sl-express-ms-base-service" />
+        <module name="sentinel-demo-spring-cloud-gateway" />
+        <module name="sentinel-metric-exporter" />
+        <module name="sl-express-ms-courier-api" />
+        <module name="sentinel-demo-cluster-server-alone" />
+        <module name="sentinel-logging-slf4j" />
+        <module name="sl-express-ms-search-domain" />
+        <module name="sl-express-ms-track-service" />
+        <module name="sl-express-ms-driver-api" />
+        <module name="sentinel-demo-rocketmq" />
+        <module name="sl-express-ms-sms-api" />
+        <module name="sl-express-ms-search-service" />
+        <module name="sl-express-ms-service-scope-service" />
+        <module name="sentinel-reactor-adapter" />
+        <module name="sentinel-transport-netty-http" />
+        <module name="sl-express-ms-service-scope-domain" />
+        <module name="sentinel-jax-rs-adapter" />
+        <module name="sentinel-demo-apache-httpclient" />
+        <module name="sl-express-ms-carriage-domain" />
+        <module name="sl-express-ms-work-domain" />
+        <module name="sentinel-annotation-aspectj" />
+        <module name="sl-express-ms-web-driver" />
+        <module name="sentinel-cluster-server-default" />
+        <module name="sentinel-demo-parameter-flow-control" />
+        <module name="sentinel-parameter-flow-control" />
+        <module name="sl-express-ms-base-domain" />
+        <module name="sl-express-ms-courier-service" />
+        <module name="sentinel-motan-adapter" />
+        <module name="sentinel-zuul-adapter" />
+        <module name="sentinel-demo-etcd-datasource" />
+        <module name="sl-express-common" />
+        <module name="sentinel-web-servlet" />
+        <module name="sentinel-datasource-nacos" />
+        <module name="sentinel-demo-spring-webmvc" />
+        <module name="sentinel-transport-common" />
+        <module name="sl-express-ms-user-api" />
+        <module name="sentinel-benchmark" />
+        <module name="sentinel-demo-quarkus" />
+        <module name="sl-express-ms-courier-domain" />
+        <module name="sl-express-ms-transport-info-domain" />
+        <module name="sentinel-core" />
+        <module name="sentinel-cluster-client-default" />
+        <module name="sl-express-ms-user-domain" />
+        <module name="sentinel-demo-slotchain-spi" />
+        <module name="sentinel-demo-log-logback" />
+        <module name="sl-express-ms-search-api" />
+        <module name="sentinel-demo-zuul2-gateway" />
+        <module name="sentinel-demo-annotation-spring-aop" />
+        <module name="sentinel-demo-jax-rs" />
+        <module name="sentinel-demo-apollo-datasource" />
+        <module name="sentinel-datasource-spring-cloud-config" />
+        <module name="sentinel-demo-apache-dubbo" />
+        <module name="sentinel-demo-command-handler" />
+        <module name="sentinel-demo-dynamic-file-rule" />
+        <module name="sl-express-ms-work-api" />
+        <module name="sl-express-ms-sms-service" />
+        <module name="sentinel-demo-nacos-datasource" />
+        <module name="sentinel-spring-webmvc-adapter" />
+        <module name="sentinel-demo-okhttp" />
+        <module name="sentinel-demo-slot-spi" />
+        <module name="sentinel-dashboard" />
+        <module name="sl-express-ms-work-service" />
+        <module name="sentinel-demo-annotation-cdi-interceptor" />
+        <module name="sentinel-demo-sofa-rpc" />
+        <module name="sentinel-cluster-server-envoy-rls" />
+        <module name="sentinel-api-gateway-adapter-common" />
+        <module name="sentinel-grpc-adapter" />
+        <module name="sentinel-cluster-common-default" />
+        <module name="sentinel-demo-dubbo" />
+        <module name="sentinel-demo-cluster-embedded" />
+        <module name="sl-express-ms-transport-domain" />
+        <module name="sentinel-demo-spring-webflux" />
+        <module name="sl-express-ms-service-scope-api" />
+        <module name="sl-express-mq" />
+        <module name="sentinel-datasource-redis" />
+        <module name="sentinel-demo-zuul-gateway" />
+        <module name="sl-express-ms-carriage-service" />
+        <module name="sl-express-ms-driver-domain" />
+        <module name="sl-express-ms-web-manager" />
+        <module name="sl-express-ms-oms-domain" />
+        <module name="sl-express-ms-base-api" />
+        <module name="sl-express-ms-transport-service" />
+      </profile>
+      <profile name="Annotation profile for sentinel-parent" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/io/quarkus/quarkus-extension-processor/1.4.1.Final/quarkus-extension-processor-1.4.1.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/jboss/jdeparser/jdeparser/2.0.2.Final/jdeparser-2.0.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/github/javaparser/javaparser-core/3.14.10/javaparser-core-3.14.10.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar" />
+        </processorPath>
+        <module name="sentinel-jax-rs-quarkus-adapter-deployment" />
+        <module name="sentinel-annotation-quarkus-adapter" />
+        <module name="sentinel-native-image-quarkus-adapter-deployment" />
+        <module name="sentinel-annotation-quarkus-adapter-deployment" />
+        <module name="sentinel-jax-rs-quarkus-adapter" />
+        <module name="sentinel-native-image-quarkus-adapter" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sentinel-annotation-quarkus-adapter" options="-parameters" />
+      <module name="sentinel-annotation-quarkus-adapter-deployment" options="-parameters" />
+      <module name="sentinel-demo-quarkus" options="-parameters" />
+      <module name="sentinel-jax-rs-quarkus-adapter" options="-parameters" />
+      <module name="sentinel-jax-rs-quarkus-adapter-deployment" options="-parameters" />
+      <module name="sentinel-native-image-quarkus-adapter" options="-parameters" />
+      <module name="sentinel-native-image-quarkus-adapter-deployment" options="-parameters" />
+      <module name="sentinel-quarkus-adapter-parent" options="-parameters" />
+    </option>
+  </component>
+</project>
