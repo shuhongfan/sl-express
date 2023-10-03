@@ -8,10 +8,6 @@
         <option value="$PROJECT_DIR$/sl-express-common/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-mq/pom.xml" />
-        <option value="$PROJECT_DIR$/sl-express-xxl-job/pom.xml" />
-        <option value="$PROJECT_DIR$/sl-express-pay/pom.xml" />
-        <option value="$PROJECT_DIR$/sl-express-ms-work-service/pom.xml" />
-        <option value="$PROJECT_DIR$/sentinel/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-ms-base-api/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-ms-base-domain/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-ms-base-service/pom.xml" />
@@ -58,6 +54,10 @@
         <option value="$PROJECT_DIR$/sl-express-ms-web-manager/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-ms-work-api/pom.xml" />
         <option value="$PROJECT_DIR$/sl-express-ms-work-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/sl-express-ms-work-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sl-express-pay/pom.xml" />
+        <option value="$PROJECT_DIR$/sl-express-xxl-job/pom.xml" />
+        <option value="$PROJECT_DIR$/sentinel/pom.xml" />
       </list>
     </option>
   </component>
