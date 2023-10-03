@@ -34,7 +34,7 @@ public class AuthTemplateTest {
     public void testLogin() {
         //登录
         Result<LoginDTO> result = this.authTemplate.opsForLogin()
-                .token("zhangsan", "123456");
+                .token("sl001", "123456");
 
         String token = result.getData().getToken().getToken();
         System.out.println("token为：" + token);
@@ -51,7 +51,7 @@ public class AuthTemplateTest {
     @Test
     public void checkToken() {
         //上面方法中生成的token
-        String token = "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDAyNjIxMzAwOTkwMDc2NzA1IiwiYWNjb3VudCI6InpoYW5nc2FuIiwibmFtZSI6IuW8oOS4iSIsIm9yZ2lkIjoxMDAyNjE5NTU4MzU3NDI1OTUzLCJzdGF0aW9uaWQiOjk4MTIyMzcwMzMzNTQxMDYyNSwiYWRtaW5pc3RyYXRvciI6ZmFsc2UsImV4cCI6MTY1OTEzNDA0MH0.WBZaeBvmuw202raw7JvvHnIMpST28d0gv6ufVDenL_iGQwdClucUfd3YPLg9BLoiosaP16SEuB1nM_-HWl8rUA";
+        String token = "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMDI1NDI4Njg3MzEyNjg0OTI5IiwiYWNjb3VudCI6InNsMDAxIiwibmFtZSI6IuW8oOaIkOmjniIsIm9yZ2lkIjoxMDI0NzA0ODQ0NDg2NzU2NjQxLCJzdGF0aW9uaWQiOjEwMjQ3MDU0ODk0MzY0OTQ3MjEsImFkbWluaXN0cmF0b3IiOmZhbHNlLCJleHAiOjE2OTYzNjMwNDF9.kOtK7uEGXOqCQIqFYV88ITie-_ppcooX3nrs4ojSYsCB0ir0JBx_eO1WWw5Mqw0K3sVSf6-Rfxu-Dpr-IhRTgA";
         AuthUserInfoDTO authUserInfo = this.tokenCheckService.parserToken(token);
         System.out.println(authUserInfo);
 
