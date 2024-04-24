@@ -1,0 +1,21 @@
+server:
+  port: 9902
+logging:
+  level:
+    org.springframework.data.neo4j: debug
+spring:
+  application:
+    name: sl-express-sdn
+  mvc:
+    pathmatch:
+      #解决异常：swagger Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+      #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher
+      matching-strategy: ant_path_matcher
+  data:
+    neo4j:
+      database: neo4j
+  neo4j:
+    authentication:
+      username: neo4j
+      password: neo4j123
+    uri: neo4j://192.168.150.101:7687

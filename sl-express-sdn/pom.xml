@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sl-express</groupId>
+        <artifactId>sl-express-parent</artifactId>
+        <version>1.4</version>
+    </parent>
+
+    <groupId>com.sl-express.sdn</groupId>
+    <artifactId>sl-express-sdn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <sl-express-common.version>1.2-SNAPSHOT</sl-express-common.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sl-express.common</groupId>
+            <artifactId>sl-express-common</artifactId>
+            <version>${sl-express-common.version}</version>
+        </dependency>
+        <!--SDN依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-neo4j</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
