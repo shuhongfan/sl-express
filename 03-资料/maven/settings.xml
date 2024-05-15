@@ -4,10 +4,10 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-    <!-- ±¾µØ²Ö¿â -->
-    <localRepository>F:\maven\repository</localRepository>
+    <!-- ï¿½ï¿½ï¿½Ø²Ö¿ï¿½ -->
+<!--    <localRepository>F:\maven\repository</localRepository>-->
 
-    <!-- ÅäÖÃË½·þÖÐdeployµÄÕËºÅ -->
+    <!-- ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½deployï¿½ï¿½ï¿½Ëºï¿½ -->
     <servers>
         <server>
             <id>sl-releases</id>
@@ -21,7 +21,7 @@
         </server>
     </servers>
 
-    <!-- Ê¹ÓÃ°¢ÀïÔÆmaven¾µÏñ£¬ÅÅ³ýË½·þ×ÊÔ´¿â -->
+    <!-- Ê¹ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½mavenï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½Ë½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ -->
     <mirrors>
         <mirror>
             <id>mirror</id>
@@ -34,7 +34,7 @@
     <profiles>
         <profile>
             <id>sl</id>
-            <!-- ÅäÖÃÏîÄ¿deployµÄµØÖ· -->
+            <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿deployï¿½Äµï¿½Ö· -->
             <properties>
                 <altReleaseDeploymentRepository>
                     sl-releases::default::http://maven.sl-express.com/nexus/content/repositories/releases/
@@ -43,7 +43,7 @@
                     sl-snapshots::default::http://maven.sl-express.com/nexus/content/repositories/snapshots/
                 </altSnapshotDeploymentRepository>
             </properties>
-            <!-- ÅäÖÃÏîÄ¿ÏÂÔØÒÀÀµµÄË½·þµØÖ· -->
+            <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½Ö· -->
             <repositories>
                 <repository>
                     <id>sl-releases</id>
@@ -70,7 +70,7 @@
     </profiles>
 
     <activeProfiles>
-         <!-- ¼¤»îÅäÖÃ -->
+         <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -->
         <activeProfile>sl</activeProfile>
     </activeProfiles>
 

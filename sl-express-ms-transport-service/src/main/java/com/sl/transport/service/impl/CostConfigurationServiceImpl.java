@@ -23,22 +23,22 @@ import java.util.stream.Collectors;
  */
 @Service
 public class CostConfigurationServiceImpl implements CostConfigurationService {
-
-    @Resource
-    private StringRedisTemplate stringRedisTemplate;
-
     /**
      * 成本配置 redis key
      */
-    static final String SL_TRANSPORT_COST_REDIS_KEY = "SL_TRANSPORT_COST_CONFIGURATION";
+    private static final String SL_TRANSPORT_COST_REDIS_KEY = "SL_TRANSPORT_COST_CONFIGURATION";
 
     /**
      * 默认成本配置
      */
-    static final Map<Object, Object> DEFAULT_COST = Map.of(
+    private static final Map<Object, Object> DEFAULT_COST = Map.of(
             TransportLineEnum.TRUNK_LINE.getCode(), 0.8,
             TransportLineEnum.BRANCH_LINE.getCode(), 1.2,
             TransportLineEnum.CONNECT_LINE.getCode(), 1.5);
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
 
     /**
      * 查询成本配置

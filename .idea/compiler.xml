@@ -141,6 +141,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar" />
           <entry name="$MAVEN_REPOSITORY$/com/github/javaparser/javaparser-core/3.14.10/javaparser-core-3.14.10.jar" />
           <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar" />

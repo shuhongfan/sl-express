@@ -64,6 +64,8 @@
     <file url="file://$PROJECT_DIR$/sentinel/sentinel-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sentinel/sentinel-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sentinel/sentinel-dashboard/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel/sentinel-dashboard/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sentinel/sentinel-dashboard/src/main/webapp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sentinel/sentinel-demo/sentinel-demo-annotation-cdi-interceptor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sentinel/sentinel-demo/sentinel-demo-annotation-cdi-interceptor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sentinel/sentinel-demo/sentinel-demo-annotation-spring-aop/src/main/java" charset="UTF-8" />

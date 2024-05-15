@@ -16,7 +16,8 @@ public enum ExceptionEnum implements BaseExceptionEnum {
     TRANSPORT_LINE_ALREADY_EXISTS(1003, "路线已经存在"),
     TRANSPORT_LINE_NOT_FOUND(1004, "路线不存在"),
     TRANSPORT_LINE_TYPE_ERROR(1005, "路线类型错误"),
-    ORGAN_TYPE_ERROR(1006, "机构类型错误");
+    ORGAN_TYPE_ERROR(1006, "机构类型错误"),
+    TRANSPORT_LINE_ORGAN_CANNOT_SAME(1007, "起点、终点机构不能为空");
 
     private Integer code;
     private Integer status;
