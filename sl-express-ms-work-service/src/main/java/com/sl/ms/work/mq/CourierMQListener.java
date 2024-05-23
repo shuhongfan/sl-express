@@ -1,6 +1,8 @@
 package com.sl.ms.work.mq;
 
 import cn.hutool.json.JSONUtil;
+import com.sl.ms.work.service.PickupDispatchTaskService;
+import com.sl.ms.work.service.TransportOrderService;
 import com.sl.transport.common.constant.Constants;
 import com.sl.transport.common.vo.CourierMsg;
 import com.sl.transport.common.vo.CourierTaskMsg;
@@ -10,6 +12,7 @@ import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,6 +23,13 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class CourierMQListener {
+
+    @Autowired
+    private PickupDispatchTaskService pickupDispatchTaskService;
+
+    @Autowired
+    private TransportOrderService transportOrderService;
+
 
     /**
      * 生成快递员取派件任务
@@ -37,7 +47,8 @@ public class CourierMQListener {
         //解析消息
         CourierTaskMsg courierTaskMsg = JSONUtil.toBean(msg, CourierTaskMsg.class);
 
-        //TODO 未实现具体逻辑
+//        订单转运单
+        transportOrderService.orderToTransportOrder(courierTaskMsg.getOrderId());
     }
 
     /**
