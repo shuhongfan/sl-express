@@ -1,5 +1,6 @@
 package com.sl.ms.work.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.ListUtil;
 import cn.hutool.core.convert.Convert;
@@ -10,6 +11,8 @@ import cn.hutool.core.text.CharSequenceUtil;
 import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONArray;
+import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.csp.sentinel.datasource.Converter;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -34,6 +37,7 @@ import com.sl.ms.work.entity.TransportOrderTaskEntity;
 import com.sl.ms.work.mapper.TransportOrderMapper;
 import com.sl.ms.work.mapper.TransportOrderTaskMapper;
 import com.sl.ms.work.service.TransportOrderService;
+import com.sl.ms.work.service.TransportTaskService;
 import com.sl.transport.common.constant.Constants;
 import com.sl.transport.common.enums.IdEnum;
 import com.sl.transport.common.exception.SLException;
@@ -75,6 +79,11 @@ public class TransportOrderServiceImpl extends
     private MQFeign mqFeign;
     @Autowired
     private OrganFeign organFeign;
+    @Autowired
+    private TransportOrderTaskMapper transportOrderTaskMapper;
+
+    @Autowired
+    private TransportTaskService transportTaskService;
 
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -480,9 +489,87 @@ public class TransportOrderServiceImpl extends
 
     @Override
     public boolean updateByTaskId(Long taskId) {
-        return false;
-    }
+//        通过运输任务查询运单ID列表
+        List<String> transportOrderIdList = transportTaskService.queryTransportOrderIdListById(taskId);
+        if (CollUtil.isEmpty(transportOrderIdList)) {
+            return false;
+        }
 
+//        查询运单列表
+        List<TransportOrderEntity> transportOrderList = super.listByIds(transportOrderIdList);
+        for (TransportOrderEntity transportOrder : transportOrderList) {
+//            获取将发往目的地的机构
+            OrganDTO organDTO = organFeign.queryById(transportOrder.getNextAgencyId());
+
+//            构建消息实体类
+            String info = CharSequenceUtil.format("快件到达【{}】", organDTO.getName());
+            String transportInfoMsg = TransportInfoMsg.builder()
+                    .transportOrderId(transportOrder.getId())
+                    .status("运送中")
+                    .info(info)
+                    .created(DateUtil.current())
+                    .build().toJson();
+
+//            发送运单跟踪信息
+            mqFeign.sendMsg(Constants.MQ.Exchanges.TRANSPORT_INFO,
+                    Constants.MQ.RoutingKeys.TRANSPORT_INFO_APPEND,
+                    transportInfoMsg);
+
+//            设置当前所在机构ID为下一个机构ID
+            transportOrder.setCurrentAgencyId(transportOrder.getNextAgencyId());
+
+//            解析完整的运输链路，找到下一个机构ID
+            String transportLine = transportOrder.getTransportLine();
+            JSONObject jsonObject = JSONUtil.parseObj(transportLine);
+            Long nextAgencyId = 0L;
+            JSONArray nodeList = jsonObject.getJSONArray("nodeList");
+
+            //这里反向循环主要是考虑到拒收的情况，路线中会存在相同的节点，始终可以查找到后面的节点
+            //正常：A B C D E ，拒收：A B C D E D C B A
+            for (int i = nodeList.size() - 1; i >= 0; i--) {
+                JSONObject node = (JSONObject) nodeList.get(i);
+                Long agencyId = node.getLong("bid");
+                if (ObjectUtil.equal(agencyId, transportOrder.getCurrentAgencyId())) {
+                    if (i == nodeList.size() - 1) {
+//                        已经是最后一个节点了，也就是最后一个机构了
+                        nextAgencyId = agencyId;
+                        transportOrder.setStatus(TransportOrderStatus.ARRIVED_END);
+
+//                        发送消息更新状态
+                        sendUpdateStatusMsg(
+                                ListUtil.toList(transportOrder.getId()),
+                                TransportOrderStatus.ARRIVED_END
+                        );
+                    } else {
+//                        后面还有节点
+                        nextAgencyId = ((JSONObject) nodeList.get(i + 1)).getLong("bid");
+//                        设置运单状态为待调度
+                        transportOrder.setSchedulingStatus(TransportOrderSchedulingStatus.TO_BE_SCHEDULED);
+                    }
+                    break;
+                }
+            }
+
+//            设置下一个节点ID
+            transportOrder.setNextAgencyId(nextAgencyId);
+
+//            如果运单没有到达终点，需要发送消息到运单调度的交换机中
+//            如果已经到达最终网点,需要发送消息,进行分配快递员作业
+            if (ObjectUtil.notEqual(
+                    transportOrder.getStatus(),
+                    TransportOrderStatus.ARRIVED_END
+            )) {
+                sendTransportOrderMsgToDispatch(transportOrder);
+            } else {
+//                发送消息生产派件任务
+                sendDispatchTaskMsgToDispatch(transportOrder);
+            }
+        }
+
+//        批量更新运单
+        return updateBatchById(transportOrderList);
+    }
+    
     /**
      * 统计各个状态的数量
      *
@@ -512,8 +599,34 @@ public class TransportOrderServiceImpl extends
         return statusCount;
     }
 
+    /**
+     * 根据运输任务id分页查询运单信息
+     *
+     * @param page             页码
+     * @param pageSize         页面大小
+     * @param taskId           运输任务id
+     * @param transportOrderId 运单id
+     * @return 运单对象分页数据
+     */
     @Override
     public PageResponse<TransportOrderDTO> pageQueryByTaskId(Integer page, Integer pageSize, String taskId, String transportOrderId) {
-        return null;
+//        构建分页查询条件
+        Page<TransportOrderTaskEntity> transportOrderTaskEntityPage = new Page<>(page, pageSize);
+        LambdaQueryWrapper<TransportOrderTaskEntity> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(ObjectUtil.isNotEmpty(transportOrderId), TransportOrderTaskEntity::getTransportTaskId, taskId)
+                .like(ObjectUtil.isNotEmpty(transportOrderId), TransportOrderTaskEntity::getTransportOrderId, transportOrderId)
+                .orderByDesc(TransportOrderTaskEntity::getCreated);
+
+//        根据运输任务ID、运单ID查询运输任务与运单关联关系表
+        Page<TransportOrderTaskEntity> pageResult = transportOrderTaskMapper.selectPage(transportOrderTaskEntityPage, queryWrapper);
+        if (CollUtil.isEmpty(pageResult.getRecords())) {
+            return new PageResponse<>(pageResult);
+        }
+
+//        根据运单ID查询运单，并转化为DTO
+        List<String> transportOrderIds = pageResult.getRecords().stream().map(TransportOrderTaskEntity::getTransportOrderId).collect(Collectors.toList());
+        List<TransportOrderEntity> entities = baseMapper.selectBatchIds(transportOrderIds);
+
+        return PageResponse.of(BeanUtil.copyToList(entities, TransportOrderDTO.class));
     }
 }
