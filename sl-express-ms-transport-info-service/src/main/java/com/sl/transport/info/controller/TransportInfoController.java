@@ -1,16 +1,20 @@
 package com.sl.transport.info.controller;
 
+import com.github.benmanes.caffeine.cache.Cache;
 import com.sl.transport.common.exception.SLException;
 import com.sl.transport.common.util.BeanUtil;
 import com.sl.transport.common.util.ObjectUtil;
+import com.sl.transport.info.config.CaffeineConfig;
 import com.sl.transport.info.domain.TransportInfoDTO;
 import com.sl.transport.info.entity.TransportInfoEntity;
 import com.sl.transport.info.enums.ExceptionEnum;
+import com.sl.transport.info.service.BloomFilterService;
 import com.sl.transport.info.service.TransportInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +30,12 @@ public class TransportInfoController {
     @Resource
     private TransportInfoService transportInfoService;
 
+    @Resource
+    public Cache<String, TransportInfoDTO> transportInfoCache;
+
+    @Autowired
+    private BloomFilterService bloomFilterService;
+
     /**
      * 根据运单id查询运单信息
      *
@@ -38,10 +48,23 @@ public class TransportInfoController {
     @ApiOperation(value = "查询", notes = "根据运单id查询物流信息")
     @GetMapping("{transportOrderId}")
     public TransportInfoDTO queryByTransportOrderId(@PathVariable("transportOrderId") String transportOrderId) {
-        TransportInfoEntity transportInfoEntity = transportInfoService.queryByTransportOrderId(transportOrderId);
-        if (ObjectUtil.isNotEmpty(transportInfoEntity)) {
-            return BeanUtil.toBean(transportInfoEntity, TransportInfoDTO.class);
+//        如果布隆过滤器中不存在，无需缓存命中，直接返回即可
+        boolean contains = bloomFilterService.contains(transportOrderId);
+        if (!contains) {
+            throw new SLException(ExceptionEnum.NOT_FOUND);
         }
+
+        TransportInfoDTO transportInfoDTO = transportInfoCache.get(transportOrderId, s -> {
+//            未命中，查询MongoMD
+            TransportInfoEntity transportInfoEntity = this.transportInfoService.queryByTransportOrderId(transportOrderId);
+//            转换成DTO
+            return BeanUtil.toBean(transportInfoEntity, TransportInfoDTO.class);
+        });
+
+        if (ObjectUtil.isNotEmpty(transportInfoDTO)) {
+            return transportInfoDTO;
+        }
+
         throw new SLException(ExceptionEnum.NOT_FOUND);
     }
 
